@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Manrope:wght@200;400;500&display=swap&family=Alexandria:wght@300;400;600;700;800&display=swap&family=Handjet:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght,ELGR,ELSH@100..900,1..2,0..16&display=swap');
+
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
+@layer base {
+  input[type='number'] {
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+    }
+  }
+}
+
+@font-face {
+  font-family: 'VCR Font';
+  src: url('../src/assets/fonts/vcr_osd_mono.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VCR Font';
+  src: url('../src/assets/fonts/vcr_osd_mono.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --font-apple: -apple-system, 'BlinkMacSystemFont';
+  --font-fallback: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-family-base: var(--font-apple), var(--font-fallback), var(--font-emoji);
+
+  --font-manrope: 'Manrope', var(--font-family-base);
+  --font-vcr: 'VCR Font', var(--font-family-base);
+  --font-alexandria: 'Alexandria', var(--font-family-base);
+  --font-handjet: 'Handjet', var(--font-family-base);
+}
+
+body {
+  @apply flex min-h-screen flex-col bg-islamic-bg-black font-alexandria text-white antialiased will-change-auto;
+}
+
+.storybook-sticky-emulation {
+  @apply fixed bottom-0 left-0 right-0 z-30;
+}

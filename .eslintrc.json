@@ -1,6 +1,6 @@
 {
   "root": true,
-  "ignorePatterns": ["!**/*", ".next/**/*"],
+  "ignorePatterns": ["!**/*", ".next/**/*", "storybook-static"],
   "plugins": ["@nx"],
   "overrides": [
     {

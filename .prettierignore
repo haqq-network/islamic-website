@@ -1,5 +1,8 @@
 # Add files here to ignore them from prettier formatting
 /dist
 /coverage
+/.yarn
+.yarnrc.yml
+.next
 /.nx/cache
 /.nx/workspace-data

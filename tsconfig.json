@@ -23,21 +23,26 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
+    "types": ["jest", "node"],
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "types": ["jest", "node"]
+    "paths": {
+      "@/*": ["./src/*"],
+      "@storybook/*": [".storybook/*"]
+    }
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.js",
     "src/**/*.jsx",
+    ".storybook/**/*.tsx",
+    "next-env.d.ts",
     ".next/types/**/*.ts",
-    "dist/islamic-website/.next/types/**/*.ts",
-    "next-env.d.ts"
+    "dist/islamic-website/.next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
@@ -45,6 +50,18 @@
     "jest.config.ts",
     "src/**/*.spec.ts",
     "src/**/*.test.ts",
-    "dist/islamic-website/**/*"
+    "dist/islamic-website/**/*",
+    "**/*.stories.ts",
+    "**/*.stories.js"
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "references": [
+    {
+      "path": "./tsconfig.storybook.json"
+    }
   ]
 }
