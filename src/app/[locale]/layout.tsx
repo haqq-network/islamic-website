@@ -22,7 +22,6 @@ import { SupportedLocales } from '@/types';
 import { LocaleLink } from '@/navigation';
 import { SOCIAL_LINKS } from '@/lib/social-links';
 import { getMessages } from 'next-intl/server';
-console.log({ DEPLOY_URL });
 
 export const metadata: Metadata = {
   title: {

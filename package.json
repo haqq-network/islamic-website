@@ -8,7 +8,8 @@
     "start": "nx start",
     "test": "nx test",
     "e2e": "nx e2e",
-    "storybook": "nx storybook"
+    "storybook": "nx storybook",
+    "format": "prettier --write '**/*.{ts,js,tsx,jsx,cjs,mjs,css,json,md,mdx,html,yaml,yml}'"
   },
   "private": true,
   "dependencies": {
