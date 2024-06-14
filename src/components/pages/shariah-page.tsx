@@ -155,7 +155,7 @@ export function ShariahPage({
           )}
         >
           <div className="relative hidden w-[292px] flex-none lg:block">
-            <div className="sticky top-[112px] pb-[80px]">
+            <div className="sticky top-[calc(112px+40px)] pb-[80px]">
               <ShariahPageDesktopNav
                 sections={sections}
                 activeSection={activeSection}
