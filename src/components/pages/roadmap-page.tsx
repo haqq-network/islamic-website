@@ -4,6 +4,7 @@ import { MarkdownText } from '@/components/ui/markdown-text';
 import { Container } from '@/components/ui/container';
 import { Text } from '@/components/ui/text';
 import { SubscribeForm } from '@/components/forms/subscribe-form';
+import { env } from '@/env/client';
 
 export interface RoadmapPeriod {
   title: string;
@@ -92,14 +93,12 @@ function RoadmapBgImg() {
 }
 
 function RoadmapCard({
-  period,
+  period: { goals, isAchieved, title },
   isLast,
 }: {
   period: RoadmapPeriod;
   isLast?: boolean;
 }) {
-  const { goals, isAchieved, title } = period;
-
   return (
     <div className="flex gap-x-[12px] md:gap-x-[16px]">
       <div className="flex flex-col items-center gap-y-[12px]">
@@ -163,13 +162,7 @@ function RoadmapCard({
   );
 }
 
-export function RoadmapPage({
-  roadmap,
-  turnstileSiteKey,
-}: {
-  roadmap: RoadmapPeriod[];
-  turnstileSiteKey?: string;
-}) {
+export function RoadmapPage({ roadmap }: { roadmap: RoadmapPeriod[] }) {
   const t = useTranslations('');
 
   return (
@@ -192,16 +185,14 @@ export function RoadmapPage({
             })}
           </div>
 
-          {turnstileSiteKey && (
-            <div className="mt-[48px] flex flex-col gap-x-[28px] gap-y-[24px] rounded-[20px] bg-[#181E25B3] px-[16px] py-[24px] md:mt-[80px] lg:mt-[120px] lg:max-w-[1200px] lg:flex-row lg:items-start lg:p-[28px]">
-              <Text size="small">{t('subscribe-form.text')}</Text>
-              <SubscribeForm
-                className="flex w-full flex-col gap-[16px] lg:flex-row"
-                inputClassName="lg:min-w-[280px]"
-                turnstileSiteKey={turnstileSiteKey}
-              />
-            </div>
-          )}
+          <div className="mt-[48px] flex flex-col gap-x-[28px] gap-y-[24px] rounded-[20px] bg-[#181E25B3] px-[16px] py-[24px] md:mt-[80px] lg:mt-[120px] lg:max-w-[1200px] lg:flex-row lg:items-start lg:p-[28px]">
+            <Text size="small">{t('subscribe-form.text')}</Text>
+            <SubscribeForm
+              className="flex w-full flex-col gap-[16px] lg:flex-row"
+              inputClassName="lg:min-w-[280px]"
+              turnstileSiteKey={env.NEXT_PUBLIC_TURNSTILE_SITEKEY}
+            />
+          </div>
 
           <RoadmapBgImg />
         </Container>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { DEPLOY_URL, TURNSTILE_SITEKEY } from '@/constants';
+import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 import { AcademyPreviewPage } from '@/components/pages/academy-preview-page';
 
@@ -19,5 +19,5 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  return <AcademyPreviewPage turnstileSiteKey={TURNSTILE_SITEKEY} />;
+  return <AcademyPreviewPage />;
 }

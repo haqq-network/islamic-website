@@ -17,12 +17,9 @@ import { PlayVideoIcon } from '@/components/icons';
 import { useActiveLesson } from '@/hooks/use-active-lesson';
 import { academyModules } from '@/lib/academy-modules';
 import { SubscribeForm } from '@/components/forms/subscribe-form';
+import { env } from '@/env/client';
 
-export function AcademyPreviewPage({
-  turnstileSiteKey,
-}: {
-  turnstileSiteKey?: string;
-}) {
+export function AcademyPreviewPage() {
   const [locale, setLocale] = useState('en-US');
 
   useEffect(() => {
@@ -30,33 +27,30 @@ export function AcademyPreviewPage({
   }, []);
 
   const modulesToRender = useMemo(() => {
-    return (
-      turnstileSiteKey &&
-      academyModules.map((academyModule, index) => {
-        if (!academyModule.isAvailable) {
-          return null;
-        }
+    return academyModules.map((academyModule, index) => {
+      if (!academyModule.isAvailable) {
+        return null;
+      }
 
-        const date = new Date(academyModule.availableLessonsDate);
-        const formattedDate = date.toLocaleDateString(locale, {
-          day: '2-digit',
-          month: '2-digit',
-          year: undefined,
-        });
-        const moduleCount = index + 1;
+      const date = new Date(academyModule.availableLessonsDate);
+      const formattedDate = date.toLocaleDateString(locale, {
+        day: '2-digit',
+        month: '2-digit',
+        year: undefined,
+      });
+      const moduleCount = index + 1;
 
-        return (
-          <Module
-            key={`module-${moduleCount}`}
-            availableLessonsDate={formattedDate}
-            lessons={academyModule.moduleLessons}
-            moduleCount={moduleCount}
-            isLessonsAvailable={academyModule.isLessonsAvailable}
-          />
-        );
-      })
-    );
-  }, [locale, turnstileSiteKey]);
+      return (
+        <Module
+          key={`module-${moduleCount}`}
+          availableLessonsDate={formattedDate}
+          lessons={academyModule.moduleLessons}
+          moduleCount={moduleCount}
+          isLessonsAvailable={academyModule.isLessonsAvailable}
+        />
+      );
+    });
+  }, [locale]);
 
   return (
     <div className="overflow-x-clip">
@@ -90,9 +84,7 @@ export function AcademyPreviewPage({
                   <IntroOutroModule isIntro />
                   {modulesToRender}
                   <IntroOutroModule />
-                  {turnstileSiteKey && (
-                    <SubscribeBlock turnstileSiteKey={turnstileSiteKey} />
-                  )}
+                  <SubscribeBlock />
                 </div>
               )}
             </div>
@@ -295,7 +287,7 @@ function IntroOutroModule({ isIntro }: { isIntro?: boolean }) {
   );
 }
 
-function SubscribeBlock({ turnstileSiteKey }: { turnstileSiteKey: string }) {
+function SubscribeBlock() {
   return (
     <Block>
       <div className="flex flex-col items-center py-[33px] text-center">
@@ -307,7 +299,7 @@ function SubscribeBlock({ turnstileSiteKey }: { turnstileSiteKey: string }) {
           <SubscribeForm
             className="mt-[28px] flex w-full flex-col gap-[16px] lg:flex-row"
             inputClassName="lg:min-w-[280px]"
-            turnstileSiteKey={turnstileSiteKey}
+            turnstileSiteKey={env.NEXT_PUBLIC_TURNSTILE_SITEKEY}
           />
         </div>
       </div>

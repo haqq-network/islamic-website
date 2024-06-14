@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { BlogPage } from '@/components/pages/blog-page';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
-import { DEPLOY_URL, TURNSTILE_SITEKEY } from '@/constants';
+import { DEPLOY_URL } from '@/constants';
 import { getIslamicBlogPostsFromFalconer } from '@/utils/get-blog-posts';
 
 export const dynamic = 'force-dynamic';
@@ -37,11 +37,6 @@ export default async function Page() {
   }
 
   return (
-    <BlogPage
-      featuredPost={featuredPost}
-      posts={postsToRender}
-      turnstileSiteKey={TURNSTILE_SITEKEY}
-      tags={tags}
-    />
+    <BlogPage featuredPost={featuredPost} posts={postsToRender} tags={tags} />
   );
 }

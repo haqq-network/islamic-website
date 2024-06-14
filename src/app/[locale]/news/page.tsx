@@ -1,5 +1,5 @@
 import { NewsPage } from '@/components/pages/news-page';
-import { DEPLOY_URL, TURNSTILE_SITEKEY } from '@/constants';
+import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 import { getNewsPageContentFromFalconer } from '@/utils/get-news';
 import type { Metadata } from 'next';
@@ -25,5 +25,5 @@ export const metadata: Metadata = {
 export default async function Page() {
   const news = await getNewsPageContentFromFalconer();
 
-  return <NewsPage news={news} turnstileSiteKey={TURNSTILE_SITEKEY} />;
+  return <NewsPage news={news} />;
 }

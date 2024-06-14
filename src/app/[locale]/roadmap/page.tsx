@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { DEPLOY_URL, TURNSTILE_SITEKEY } from '@/constants';
+import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 import { getRoadmapContentFromFalconer } from '@/utils/get-roadmap';
 import { RoadmapPage } from '@/components/pages/roadmap-page';
@@ -27,5 +27,5 @@ export default async function Page({
 }) {
   const roadmap = await getRoadmapContentFromFalconer(locale);
 
-  return <RoadmapPage roadmap={roadmap} turnstileSiteKey={TURNSTILE_SITEKEY} />;
+  return <RoadmapPage roadmap={roadmap} />;
 }
