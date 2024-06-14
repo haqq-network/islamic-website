@@ -4,6 +4,10 @@
 const { composePlugins, withNx } = require('@nx/next');
 const { withSentryConfig } = require('@sentry/nextjs');
 const withNextIntl = require('next-intl/plugin');
+const jiti = require('jiti')(__filename);
+
+// Validate during build.
+jiti('./src/env/client.ts');
 
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
