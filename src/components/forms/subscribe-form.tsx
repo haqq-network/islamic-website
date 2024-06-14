@@ -13,7 +13,7 @@ import {
   HookedFormInput,
   SubscribeFormFields,
 } from './hooked-form-input';
-import { LocaleLink } from '@/lib/navigation';
+import { LocaleLink } from '@/navigation';
 import { Button } from '@/components/ui/button';
 import { Modal, ModalCloseButton } from '@/components/ui/modal';
 import { Text } from '@/components/ui/text';

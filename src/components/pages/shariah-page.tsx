@@ -22,7 +22,7 @@ import { ShariahBlock } from '@/components/ui/shariah-block';
 import { MemberModalCard } from '@/components/ui/member-modal-card';
 import { Modal } from '@/components/ui/modal';
 import { Member, SupportedLocales } from '@/types';
-import { LocaleLink } from '@/lib/navigation';
+import { LocaleLink } from '@/navigation';
 
 function MembersContainer({
   members,

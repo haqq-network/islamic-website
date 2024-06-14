@@ -3,7 +3,7 @@ import { Fragment, useEffect, useMemo, useState } from 'react';
 import clsx from 'clsx';
 import { Select } from './select';
 import { Container } from './container';
-import { LocaleLink } from '@/lib/navigation';
+import { LocaleLink } from '@/navigation';
 
 export function ShariahPageMobileNav({
   sections,

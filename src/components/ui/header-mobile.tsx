@@ -8,7 +8,7 @@ import { IslamicHeaderLogo } from '../icons';
 import { BurgerButton } from './burger-button';
 import { Button } from './button';
 import { SupportedLocales } from '@/types';
-import { LocaleLink } from '@/lib/navigation';
+import { LocaleLink } from '@/navigation';
 
 export function MobileHeader({
   isBannerVisible = false,

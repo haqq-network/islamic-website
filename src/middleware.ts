@@ -1,7 +1,11 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import createMiddleware from 'next-intl/middleware';
-import { SUPPORTED_LOCALES, BLOCKED_COUNTRY } from './constants';
+import {
+  SUPPORTED_LOCALES,
+  DEFAULT_LOCALE,
+  BLOCKED_COUNTRY,
+} from './constants';
 
 export const config = {
   // Next line skips folders "api", "_next" and all files with an extension (e.g. favicon.ico)
@@ -10,7 +14,7 @@ export const config = {
 
 const intlMiddleware = createMiddleware({
   locales: SUPPORTED_LOCALES,
-  defaultLocale: 'en',
+  defaultLocale: DEFAULT_LOCALE,
   localePrefix: 'as-needed',
   localeDetection: true,
 });

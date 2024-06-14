@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import availableSoonBgImgData from '@/assets/images/available-soon-bg.webp';
 import { Container } from '@/components/ui/container';
-import { LocaleLink } from '@/lib/navigation';
+import { LocaleLink } from '@/navigation';
 import { Text } from '@/components/ui/text';
 
 export function AvailableSoonPage() {

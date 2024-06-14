@@ -31,7 +31,7 @@ import { Container } from './container';
 import { IslamicHeaderLogo } from '../icons';
 import { DropdownLink } from './dropdown-link';
 import { Button } from './button';
-import { LocaleLink } from '@/lib/navigation';
+import { LocaleLink } from '@/navigation';
 
 interface HeaderLinkProps {
   url: string;

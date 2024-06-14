@@ -2,8 +2,8 @@ import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { Heading } from '@/components/ui/heading';
 import { Text } from '@/components/ui/text';
-import { LocaleLink } from '@/lib/navigation';
 import { useTranslations } from 'next-intl';
+import { LocaleLink } from '@/navigation';
 
 export function LearnAndGrowBlock() {
   const t = useTranslations('index-page');

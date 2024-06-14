@@ -1,7 +1,7 @@
 import { Container } from '@/components/ui/container';
 import { Heading } from '@/components/ui/heading';
 import { NewsCard } from '@/components/ui/news-card';
-import { LocaleLink } from '@/lib/navigation';
+import { LocaleLink } from '@/navigation';
 import { NewsPost } from '@/types';
 import { useTranslations } from 'next-intl';
 

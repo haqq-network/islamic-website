@@ -11,7 +11,7 @@ import {
   YoutubeIcon,
 } from '../icons';
 import { Container } from './container';
-import { LocaleLink } from '@/lib/navigation';
+import { LocaleLink } from '@/navigation';
 import Link from 'next/link';
 
 interface FooterNavLink {

@@ -1,4 +1,4 @@
-import { LocaleLink } from '@/lib/navigation';
+import { LocaleLink } from '@/navigation';
 import { ReactNode } from 'react';
 
 export function DropdownLink({

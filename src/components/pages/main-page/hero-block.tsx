@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { GradientText } from '@/components/ui/gradient-text';
 import { Text } from '@/components/ui/text';
-import { LocaleLink } from '@/lib/navigation';
+import { LocaleLink } from '@/navigation';
 import { PlayVideoIcon } from '@/components/icons';
 import { Modal, ModalCloseButton } from '@/components/ui/modal';
 import youtubeVideoPlaceholderImage from '@/assets/images/desert-preview.webp';

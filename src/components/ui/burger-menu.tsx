@@ -24,7 +24,7 @@ import {
   StarIcon,
   ValuesIcon,
 } from '../icons/header-icons';
-import { LocaleLink } from '@/lib/navigation';
+import { LocaleLink } from '@/navigation';
 
 function BurgerMenuDropdownLink({
   icon,

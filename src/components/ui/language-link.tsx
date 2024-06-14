@@ -1,4 +1,4 @@
-import { LocaleLink } from '@/lib/navigation';
+import { LocaleLink } from '@/navigation';
 import { SupportedLocales } from '@/types';
 import clsx from 'clsx';
 import { CheckMarkIcon } from '../icons/header-icons';

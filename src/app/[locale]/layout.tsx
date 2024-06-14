@@ -19,7 +19,7 @@ import { Footer } from '@/components/ui/footer';
 import { Container } from '@/components/ui/container';
 import { CookieConsentModal } from '@/components/ui/cookie-consent-modal';
 import { SupportedLocales } from '@/types';
-import { LocaleLink } from '@/lib/navigation';
+import { LocaleLink } from '@/navigation';
 import { SOCIAL_LINKS } from '@/lib/social-links';
 import { getMessages } from 'next-intl/server';
 console.log({ DEPLOY_URL });
