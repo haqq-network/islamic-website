@@ -3,7 +3,6 @@ import { GradientText as GradientTextComponent } from './gradient-text';
 
 const meta: Meta<typeof GradientTextComponent> = {
   component: GradientTextComponent,
-  title: 'islamic-website/ui-kit',
   parameters: {
     layout: 'centered',
   },

@@ -5,7 +5,6 @@ import { Button } from './button';
 
 const meta: Meta<typeof ModalComponent> = {
   component: ModalComponent,
-  title: 'islamic-website/ui-kit',
   parameters: {
     layout: 'centered',
   },

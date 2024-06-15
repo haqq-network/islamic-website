@@ -3,7 +3,6 @@ import { NewsCard as NewsCardComponent } from './news-card';
 
 const meta: Meta<typeof NewsCardComponent> = {
   component: NewsCardComponent,
-  title: 'islamic-website/ui-kit',
 };
 
 export default meta;

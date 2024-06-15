@@ -5,7 +5,6 @@ import { withoutPadding } from '@storybook/decorators';
 
 const meta: Meta<typeof FooterComponent> = {
   component: FooterComponent,
-  title: 'islamic-website/ui-kit',
   parameters: {
     layout: 'centered',
   },

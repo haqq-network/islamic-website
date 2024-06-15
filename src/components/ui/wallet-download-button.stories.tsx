@@ -3,7 +3,6 @@ import { WalletDownloadButton as WalletDownloadButtonComponent } from './wallet-
 
 const meta: Meta<typeof WalletDownloadButtonComponent> = {
   component: WalletDownloadButtonComponent,
-  title: 'islamic-website/ui-kit/wallet-download-button',
   parameters: {
     layout: 'centered',
   },

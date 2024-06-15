@@ -3,7 +3,6 @@ import { MarkdownText as MarkdownTextComponent } from './markdown-text';
 
 const meta: Meta<typeof MarkdownTextComponent> = {
   component: MarkdownTextComponent,
-  title: 'islamic-website/ui-kit',
 };
 
 export default meta;

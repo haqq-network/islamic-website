@@ -3,7 +3,6 @@ import { MemberModalCard as MemberModalCardComponent } from './member-modal-card
 
 const meta: Meta<typeof MemberModalCardComponent> = {
   component: MemberModalCardComponent,
-  title: 'islamic-website/ui-kit',
   parameters: {
     layout: 'centered',
   },

@@ -3,7 +3,6 @@ import { Heading as HeadingComponent } from './heading';
 
 const meta: Meta<typeof HeadingComponent> = {
   component: HeadingComponent,
-  title: 'islamic-website/ui-kit',
   parameters: {
     layout: 'centered',
   },

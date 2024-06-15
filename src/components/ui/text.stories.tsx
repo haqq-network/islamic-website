@@ -3,7 +3,6 @@ import { Text as TextComponent } from './text';
 
 const meta: Meta<typeof TextComponent> = {
   component: TextComponent,
-  title: 'islamic-website/ui-kit',
   parameters: {
     layout: 'centered',
   },

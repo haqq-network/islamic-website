@@ -3,7 +3,6 @@ import { MemberCard as MemberCardComponent } from './member-card';
 
 const meta: Meta<typeof MemberCardComponent> = {
   component: MemberCardComponent,
-  title: 'islamic-website/ui-kit',
   parameters: {
     layout: 'centered',
   },

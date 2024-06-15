@@ -4,7 +4,6 @@ import { Select as SelectComponent } from './select';
 
 const meta: Meta<typeof SelectComponent> = {
   component: SelectComponent,
-  title: 'islamic-website/ui-kit',
 };
 
 export default meta;

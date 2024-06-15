@@ -3,7 +3,6 @@ import { Button as ButtonComponent } from './button';
 
 const meta: Meta<typeof ButtonComponent> = {
   component: ButtonComponent,
-  title: 'islamic-website/ui-kit/Button',
   parameters: {
     layout: 'centered',
   },

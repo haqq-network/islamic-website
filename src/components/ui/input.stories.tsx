@@ -3,7 +3,6 @@ import { Input as InputComponent } from './input';
 
 const meta: Meta<typeof InputComponent> = {
   component: InputComponent,
-  title: 'islamic-website/ui-kit/Input',
   parameters: {
     layout: 'centered',
   },

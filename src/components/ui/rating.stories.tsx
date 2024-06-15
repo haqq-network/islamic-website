@@ -3,7 +3,6 @@ import { RatingBadge as RatingBadgeComponent } from './rating-badge';
 
 const meta: Meta<typeof RatingBadgeComponent> = {
   component: RatingBadgeComponent,
-  title: 'islamic-website/ui-kit/RatingBadge',
 };
 
 export default meta;
