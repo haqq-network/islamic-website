@@ -7,7 +7,8 @@
     "build": "nx build",
     "start": "nx start",
     "test": "nx test",
-    "e2e": "nx e2e",
+    "lint": "nx lint",
+    "e2e": "nx e2e e2e",
     "storybook": "nx storybook",
     "format": "prettier --write '**/*.{ts,js,tsx,jsx,cjs,mjs,css,json,md,mdx,html,yaml,yml}'"
   },
@@ -24,6 +25,7 @@
     "@vercel/speed-insights": "1.0.12",
     "clsx": "2.1.1",
     "google-play-scraper": "10.0.0",
+    "jiti": "1.21.6",
     "next": "14.2.4",
     "next-intl": "3.15.0",
     "posthog-js": "1.139.1",
@@ -47,7 +49,6 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
-    "@babel/core": "7.24.7",
     "@nx/cypress": "19.3.0",
     "@nx/eslint": "19.3.0",
     "@nx/eslint-plugin": "19.3.0",
@@ -60,12 +61,14 @@
     "@storybook/addon-essentials": "8.1.9",
     "@storybook/addon-interactions": "8.1.9",
     "@storybook/core-server": "8.1.9",
-    "@storybook/jest": "0.2.3",
+    "@storybook/cli": "8.1.9",
     "@storybook/nextjs": "8.1.9",
-    "@storybook/test-runner": "0.18.2",
+    "@storybook/react": "8.1.9",
+    "@storybook/test": "8.1.9",
     "@swc-node/register": "1.9.2",
     "@swc/core": "1.5.29",
     "@swc/helpers": "0.5.11",
+    "@swc/jest": "0.2.36",
     "@tailwindcss/typography": "0.5.13",
     "@types/jest": "29.5.12",
     "@types/node": "20.14.2",
@@ -73,8 +76,6 @@
     "@types/react-dom": "18.3.0",
     "@typescript-eslint/eslint-plugin": "7.13.0",
     "@typescript-eslint/parser": "7.13.0",
-    "autoprefixer": "10.4.19",
-    "babel-jest": "29.7.0",
     "cypress": "13.11.0",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.4",
@@ -82,6 +83,7 @@
     "eslint-plugin-cypress": "3.3.0",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-prettier": "5.1.3",
     "eslint-plugin-react": "7.34.2",
     "eslint-plugin-react-hooks": "4.6.2",
     "jest": "29.7.0",
@@ -102,5 +104,5 @@
   "nx": {
     "includedScripts": []
   },
-  "packageManager": "yarn@4.3.0+sha512.1606bef7c84bc7d83b8576063de2fd08f7d69f9939015bed800f9585a002390268ecc777e9feeba7e26e9556aef6beaad4806968db2182ab5dd3e955ab3b9a0b"
+  "packageManager": "pnpm@9.3.0"
 }
