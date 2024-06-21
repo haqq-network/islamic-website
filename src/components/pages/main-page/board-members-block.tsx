@@ -4,10 +4,10 @@ import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { FilterButton } from '@/components/ui/filter-button';
 import { GradientText } from '@/components/ui/gradient-text';
-import { Member } from '@/components/ui/member-card';
 import { MemberModalCard } from '@/components/ui/member-modal-card';
+import { BoardMemberCard } from '@/components/ui/board-member-card';
 import { Modal } from '@/components/ui/modal';
-import { NewMemberCard } from '@/components/ui/new-member-card';
+import { Member } from '@/types';
 
 type BoardMembers = 'advisory' | 'executive' | 'shariah';
 
@@ -51,14 +51,14 @@ export function BoardMembersBlock({
   return (
     <div className="mt-[110px] lg:mt-[140px]">
       <Container className="relative text-white">
-        <div className="text-[28px] font-[600] leading-[32px] md:text-[44px] md:leading-[48px] lg:text-[64px] lg:leading-[70px]">
+        <h2 className="text-[28px] font-[600] leading-[32px] md:text-[44px] md:leading-[48px] lg:text-[64px] lg:leading-[70px]">
           {activeMembersType === 'advisory' && t('title.white-text.advisory')}
           {activeMembersType === 'executive' && t('title.white-text.executive')}
           {activeMembersType === 'shariah' && t('title.white-text.shariah')}
           <GradientText className="rtl:pb-[10px]">
             {t('title.gradient-text')}
           </GradientText>
-        </div>
+        </h2>
         <div className="mt-[28px] flex w-fit items-center gap-x-[8px] rounded-[10px] bg-[#2F2F2F] p-[6px] md:mt-[42px]">
           <FilterButton
             active={activeMembersType === 'advisory'}
@@ -88,20 +88,17 @@ export function BoardMembersBlock({
         <div className="mt-[12px] grid grid-cols-1 gap-[32px] md:mt-[24px] lg:mt-[36px] lg:grid-cols-2">
           {members?.map((member) => {
             return (
-              <div
+              <BoardMemberCard
+                description={member.description}
+                image={member.image}
+                title={member.title}
+                url={member.url}
                 key={member.title}
                 onClick={() => {
                   openBoardModal(member);
                 }}
                 className="h-full w-fit"
-              >
-                <NewMemberCard
-                  description={member.description}
-                  image={member.image}
-                  title={member.title}
-                  url={member.url}
-                />
-              </div>
+              />
             );
           })}
         </div>

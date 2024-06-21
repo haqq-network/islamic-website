@@ -174,6 +174,7 @@ export function DesktopHeader({
               <DesktopHeaderLink url="/shariah">
                 {t('single-links.shariah')}
               </DesktopHeaderLink>
+
               <HeaderDropdown title={t('dropdown-links.about.about')}>
                 <div className="flex gap-x-[18px]">
                   <div className="flex flex-col">

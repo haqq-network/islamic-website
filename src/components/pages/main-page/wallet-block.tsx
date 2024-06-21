@@ -15,6 +15,7 @@ import {
   WalletDownloadWithQrButton,
 } from '@/components/ui/wallet-download-button';
 import { getDynamicLink } from '@/utils/get-dynamic-link';
+import { WALLET_LINK_APPLE, WALLET_LINK_GOOGLE } from '@/constants';
 
 export function WalletBlock({
   storeRatings,
@@ -41,12 +42,12 @@ export function WalletBlock({
       appStoreLink: getDynamicLink(
         'https://haqq.network/wallet',
         distinctId,
-        'https://apps.apple.com/app/haqq-wallet-by-bored-gen/id6443843352',
+        WALLET_LINK_APPLE,
       ),
       playMarketLink: getDynamicLink(
         'https://haqq.network/wallet',
         distinctId,
-        'https://play.google.com/store/apps/details?id=com.haqq.wallet',
+        WALLET_LINK_GOOGLE,
       ),
     };
   }, [posthog]);
@@ -55,13 +56,13 @@ export function WalletBlock({
     <section>
       <Container>
         <div className="mt-[108px] flex flex-col gap-y-[32px] text-white md:mt-[164px] lg:mt-[240px]">
-          <div className="block text-[28px] font-[600] leading-[32px] md:text-[44px] md:leading-[48px] lg:hidden lg:text-[64px] lg:leading-[70px]">
+          <h2 className="block text-[28px] font-[600] leading-[32px] md:text-[44px] md:leading-[48px] lg:hidden lg:text-[64px] lg:leading-[70px]">
             {t('portfolio-block.title.white-text.first')}
             <GradientText className="rtl:pb-[10px]">
               {t('portfolio-block.title.gradient-text')}
             </GradientText>
             {t('portfolio-block.title.white-text.second')}
-          </div>
+          </h2>
           <div className="flex flex-col gap-x-[28px] gap-y-[32px] md:flex-row-reverse lg:gap-x-[36px] xl:gap-x-[54px] 2xl:gap-x-[64px]">
             <div className="pointer-events-none relative block h-[290px] select-none overflow-hidden rounded-[20px] bg-islamic-primary-graphite px-[42px] pt-[24px] md:hidden md:h-full md:px-[10px] md:pt-[32px]">
               <Image
@@ -105,73 +106,62 @@ export function WalletBlock({
                 </div>
                 <div className="hidden lg:mt-[24px] lg:flex lg:flex-row lg:gap-x-[16px]">
                   <div className="w-fit">
-                    {appStoreLink && (
-                      <Link
-                        href={appStoreLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        data-attr="download-ios"
-                      >
-                        <WalletDownloadWithQrButton
-                          type="apple"
-                          title={t(
-                            'portfolio-block.stores.download-button.title',
-                          )}
-                          link={appStoreLink}
-                        />
-                      </Link>
-                    )}
-                  </div>
-                  <div className="w-fit">
-                    {playMarketLink && (
-                      <Link
-                        href={playMarketLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        data-attr="download-android"
-                      >
-                        <WalletDownloadWithQrButton
-                          type="google"
-                          title={t(
-                            'portfolio-block.stores.download-button.title',
-                          )}
-                          link={playMarketLink}
-                        />
-                      </Link>
-                    )}
-                  </div>
-                </div>
-                <div className="mt-[20px] flex flex-col gap-y-[20px] lg:hidden">
-                  {appStoreLink && (
                     <Link
-                      href={appStoreLink}
+                      href={appStoreLink ?? WALLET_LINK_APPLE}
                       target="_blank"
                       rel="noopener noreferrer"
                       data-attr="download-ios"
                     >
-                      <WalletDownloadButton
+                      <WalletDownloadWithQrButton
                         type="apple"
                         title={t(
                           'portfolio-block.stores.download-button.title',
                         )}
+                        link={appStoreLink ?? WALLET_LINK_APPLE}
                       />
                     </Link>
-                  )}
-                  {playMarketLink && (
+                  </div>
+                  <div className="w-fit">
                     <Link
-                      href={playMarketLink}
+                      href={playMarketLink ?? WALLET_LINK_GOOGLE}
                       target="_blank"
                       rel="noopener noreferrer"
                       data-attr="download-android"
                     >
-                      <WalletDownloadButton
+                      <WalletDownloadWithQrButton
                         type="google"
                         title={t(
                           'portfolio-block.stores.download-button.title',
                         )}
+                        link={playMarketLink ?? WALLET_LINK_GOOGLE}
                       />
                     </Link>
-                  )}
+                  </div>
+                </div>
+                <div className="mt-[20px] flex flex-col gap-y-[20px] lg:hidden">
+                  <Link
+                    href={appStoreLink ?? WALLET_LINK_APPLE}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-attr="download-ios"
+                  >
+                    <WalletDownloadButton
+                      type="apple"
+                      title={t('portfolio-block.stores.download-button.title')}
+                    />
+                  </Link>
+
+                  <Link
+                    href={playMarketLink ?? WALLET_LINK_GOOGLE}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-attr="download-android"
+                  >
+                    <WalletDownloadButton
+                      type="google"
+                      title={t('portfolio-block.stores.download-button.title')}
+                    />
+                  </Link>
                 </div>
               </div>
             </div>

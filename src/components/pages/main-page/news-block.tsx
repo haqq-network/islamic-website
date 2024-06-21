@@ -8,26 +8,32 @@ import { NewsPost } from '@/types';
 export function NewsBlock({ news }: { news?: NewsPost[] }) {
   const t = useTranslations('index-page.news-block');
 
+  if (news == undefined || news?.length === 0) {
+    return null;
+  }
+
   return (
     <section>
       <Container>
         <div className="mt-[110px] flex flex-col items-start md:mt-[160px] lg:mt-[140px] xl:mt-[220px]">
           <Heading className="text-white">{t('title')}</Heading>
+
           <div className="mt-[32px] grid grid-cols-1 gap-[32px] md:mt-[52px] md:grid-cols-2 md:gap-[48px] lg:mt-[72px] lg:grid-cols-3">
-            {news &&
-              news.map((newsItem, idx) => {
-                return (
-                  <LocaleLink
-                    href={newsItem.url}
-                    key={`${newsItem.title}-${idx}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <NewsCard post={newsItem} />
-                  </LocaleLink>
-                );
-              })}
+            {news.map((newsItem, idx) => {
+              return (
+                <LocaleLink
+                  href={newsItem.url}
+                  key={`${newsItem.title}-${idx}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-attr="news-card"
+                >
+                  <NewsCard post={newsItem} />
+                </LocaleLink>
+              );
+            })}
           </div>
+
           <div className="mt-[48px] text-center font-vcr text-base uppercase text-islamic-primary-green transition-colors duration-300 hover:text-islamic-classic-green rtl:font-handjet">
             <LocaleLink href="/news" className="flex items-center gap-x-[8px]">
               {t('see-all-news')}

@@ -4,14 +4,6 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { Text } from './text';
 
-export interface Member {
-  image: string;
-  title: string;
-  description: string;
-  url?: string;
-  role?: string;
-}
-
 export function MemberCard({
   image,
   title,

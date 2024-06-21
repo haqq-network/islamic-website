@@ -29,7 +29,10 @@ export function Header({
   className?: string;
   isBuyButtonVisible?: boolean;
 }) {
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
+  const isDesktop = useMediaQuery('(min-width: 1024px)', {
+    defaultValue: true,
+    initializeWithValue: false,
+  });
 
   return isDesktop ? (
     <DesktopHeader

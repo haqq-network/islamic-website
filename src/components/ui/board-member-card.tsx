@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Text } from './text';
 
-export function NewMemberCard({
+export function BoardMemberCard({
   image,
   title,
   url,
@@ -30,6 +30,7 @@ export function NewMemberCard({
         className,
       )}
       onClick={onClick}
+      data-attr="board-member-card"
     >
       <div className="flex flex-row items-center gap-x-[20px]">
         <div className="relative h-[90px] w-[90px] overflow-hidden rounded-[20px] sm:h-[140px] sm:w-[140px] md:h-[160px] md:w-[160px]">

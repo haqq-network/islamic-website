@@ -4,9 +4,8 @@ import dynamic from 'next/dynamic';
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { Marquee } from '@/components/ui/marquee';
-import { Member } from '@/components/ui/member-card';
 import { MoonAnimatedBg } from '@/components/ui/moon-animated-background';
-import { NewsPost } from '@/types';
+import { Member, NewsPost } from '@/types';
 import { ChainStats } from '@/utils/get-chain-stats-data';
 import { BoardMembersBlock } from './board-members-block';
 import { FinanceBlock } from './finance-block';
@@ -22,7 +21,7 @@ const WalletBlock = dynamic(
     const { WalletBlock } = await import('./wallet-block');
     return { default: WalletBlock };
   },
-  { ssr: false },
+  // { ssr: false },
 );
 
 export function MainPage({
@@ -43,6 +42,7 @@ export function MainPage({
     googlePlay: number;
   };
 }) {
+  console.log({ storeRatings });
   return (
     <Fragment>
       <Hero stats={stats} />

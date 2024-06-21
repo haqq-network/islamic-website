@@ -25,6 +25,7 @@ export function FundsBlock() {
                 {t('title.gradient-text')}
               </GradientText>
             </Heading>
+
             <div className="flex flex-col flex-wrap items-center justify-center gap-[40px] md:flex-row md:gap-[80px]">
               <Link
                 href="https://df101.xyz/"
@@ -33,7 +34,7 @@ export function FundsBlock() {
                 aria-label="DF101 Capital"
               >
                 <div className="relative h-[80px] w-[220px] opacity-60 transition-opacity duration-300 hover:opacity-100">
-                  <Image src={df101LogoImgData} fill alt="DF 101" />
+                  <Image src={df101LogoImgData} fill alt="DF 101 logo" />
                 </div>
               </Link>
 
@@ -46,7 +47,7 @@ export function FundsBlock() {
                 <div className="s relative h-[80px] w-[178px] opacity-60 transition-opacity duration-300 hover:opacity-100">
                   <Image
                     src={a195LogoImgData}
-                    alt="A195 Capital"
+                    alt="A195 Capital logo"
                     fill
                     loading="lazy"
                   />
@@ -62,7 +63,7 @@ export function FundsBlock() {
                 <div className="relative h-[80px] w-[100px] opacity-60 transition-opacity duration-300 hover:opacity-100">
                   <Image
                     src={opticCapitalLogoImgData}
-                    alt="Optic Capital"
+                    alt="Optic Capital logo"
                     fill
                     loading="lazy"
                   />
@@ -77,7 +78,7 @@ export function FundsBlock() {
                 <div className="relative h-[80px] w-[140px] opacity-60 transition-opacity duration-300 hover:opacity-100">
                   <Image
                     src={aboDigitalLogoImgData}
-                    alt="ABO Digital"
+                    alt="ABO Digital logo"
                     fill
                     loading="lazy"
                   />
@@ -92,7 +93,7 @@ export function FundsBlock() {
                 <div className="relative h-[45px] w-[140px] opacity-60 transition-opacity duration-300 hover:opacity-100">
                   <Image
                     src={futurecraftVenturesImgData}
-                    alt="Futurecraft Ventures"
+                    alt="Futurecraft Ventures logo"
                     fill
                   />
                 </div>

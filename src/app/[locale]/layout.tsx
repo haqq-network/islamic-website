@@ -41,14 +41,6 @@ export const viewport: Viewport = {
   width: 'device-width',
 };
 
-// async function getMessages(locale: string) {
-//   const { default: defaultMessages } = await import(
-//     `../../../messages/${locale}.json`
-//   );
-
-//   return defaultMessages;
-// }
-
 const PostHogPageView = dynamic(
   async () => {
     const { PostHogPageView } = await import(

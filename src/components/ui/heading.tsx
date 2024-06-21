@@ -7,12 +7,13 @@ interface HeadingProps {
 }
 
 /**
- * @level1 80px
- * @level2 64px default
- * @level3 42px
- * @level4 24px
+ * Renders a heading element with the specified level and children.
+ *
+ * @param level - The level of the heading element (1, 2, 3, or 4).
+ * @param children - The content to be rendered inside the heading element.
+ * @param className - Additional CSS classes to be applied to the heading element.
+ * @returns The rendered heading element based on the specified level.
  */
-
 export function Heading({
   level = 2,
   children,
