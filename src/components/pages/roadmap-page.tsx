@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
-import { MarkdownText } from '@/components/ui/markdown-text';
-import { Container } from '@/components/ui/container';
-import { Text } from '@/components/ui/text';
 import { SubscribeForm } from '@/components/forms/subscribe-form';
+import { Container } from '@/components/ui/container';
+import { MarkdownText } from '@/components/ui/markdown-text';
+import { Text } from '@/components/ui/text';
 import { env } from '@/env/client';
 
 export interface RoadmapPeriod {

@@ -4,10 +4,10 @@ import clsx from 'clsx';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useMediaQuery } from 'usehooks-ts';
-import { SpinnerLoader } from '@/components/ui/spinner-loader';
-import { Select } from '@/components/ui/select';
-import { Text } from '@/components/ui/text';
 import { Button } from '@/components/ui/button';
+import { Select } from '@/components/ui/select';
+import { SpinnerLoader } from '@/components/ui/spinner-loader';
+import { Text } from '@/components/ui/text';
 import { useActiveLesson } from '@/hooks/use-active-lesson';
 
 export const LessonsBlock = ({

@@ -7,8 +7,8 @@ import df101LogoImgData from '@/assets/images/df101-logo.svg';
 import futurecraftVenturesImgData from '@/assets/images/futurecraft-ventures.svg';
 import opticCapitalLogoImgData from '@/assets/images/optic-capital-logo.png';
 import { Container } from '@/components/ui/container';
-import { Heading } from '@/components/ui/heading';
 import { GradientText } from '@/components/ui/gradient-text';
+import { Heading } from '@/components/ui/heading';
 
 export function FundsBlock() {
   const t = useTranslations('index-page.funds-block');

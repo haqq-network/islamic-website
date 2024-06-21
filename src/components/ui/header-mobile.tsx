@@ -2,13 +2,13 @@
 import { Fragment, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { useScrollLock } from 'usehooks-ts';
+import { LocaleLink } from '@/navigation';
+import { SupportedLocales } from '@/types';
+import { BurgerButton } from './burger-button';
 import { BurgerMenu } from './burger-menu';
+import { Button } from './button';
 import { Container } from './container';
 import { IslamicHeaderLogo } from '../icons';
-import { BurgerButton } from './burger-button';
-import { Button } from './button';
-import { SupportedLocales } from '@/types';
-import { LocaleLink } from '@/navigation';
 
 export function MobileHeader({
   isBannerVisible = false,

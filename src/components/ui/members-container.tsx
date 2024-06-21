@@ -1,9 +1,9 @@
 'use client';
 import { useCallback, useState } from 'react';
 import clsx from 'clsx';
-import { useMediaQuery } from 'usehooks-ts';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useMediaQuery } from 'usehooks-ts';
 import { MemberCard } from './member-card';
 import { MemberModalCard } from './member-modal-card';
 import { Modal } from './modal';

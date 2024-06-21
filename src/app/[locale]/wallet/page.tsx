@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { DEPLOY_URL } from '@/constants';
-import { getWalletRatings } from '@/utils/get-wallet-ratings';
-import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 import { WalletPage } from '@/components/pages/wallet-page';
+import { DEPLOY_URL } from '@/constants';
+import { islamicOpenGraphImages } from '@/lib/shared-metadata';
+import { getWalletRatings } from '@/utils/get-wallet-ratings';
 
 const title = 'Wallet';
 const description =

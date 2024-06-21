@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
+import { NotFound } from '@/components/ui/not-found-page';
 import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
-import { NotFound } from '@/components/ui/not-found-page';
 
 const title = 'Not Found';
 

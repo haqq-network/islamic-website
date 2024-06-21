@@ -9,6 +9,12 @@ import {
 import { Transition } from '@headlessui/react';
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
+import { LocaleLink } from '@/navigation';
+import { SupportedLocales } from '@/types';
+import { Button } from './button';
+import { Container } from './container';
+import { DropdownLink } from './dropdown-link';
+import { IslamicHeaderLogo } from '../icons';
 import {
   AcademyIcon,
   BlogIcon,
@@ -26,12 +32,6 @@ import {
   QuestionMarkIcon,
   CubeIcon,
 } from '../icons/header-icons';
-import { SupportedLocales } from '@/types';
-import { Container } from './container';
-import { IslamicHeaderLogo } from '../icons';
-import { DropdownLink } from './dropdown-link';
-import { Button } from './button';
-import { LocaleLink } from '@/navigation';
 
 interface HeaderLinkProps {
   url: string;

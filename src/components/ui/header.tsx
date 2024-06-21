@@ -1,7 +1,7 @@
 'use client';
 import dynamic from 'next/dynamic';
-import { SupportedLocales } from '@/types';
 import { useMediaQuery } from 'usehooks-ts';
+import { SupportedLocales } from '@/types';
 
 const DesktopHeader = dynamic(
   async () => {

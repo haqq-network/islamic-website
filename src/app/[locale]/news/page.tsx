@@ -1,8 +1,8 @@
+import type { Metadata } from 'next';
 import { NewsPage } from '@/components/pages/news-page';
 import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 import { getNewsPageContentFromFalconer } from '@/utils/get-news';
-import type { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'edge';

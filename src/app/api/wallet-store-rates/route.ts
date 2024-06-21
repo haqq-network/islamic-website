@@ -1,6 +1,6 @@
+import store from '@haqq/app-store-scraper';
 import gplay from 'google-play-scraper';
 import { NextResponse } from 'next/server';
-import store from '@haqq/app-store-scraper';
 
 export async function GET() {
   const [appStoreResponse, googlePlayResponse] = await Promise.all([

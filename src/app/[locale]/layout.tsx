@@ -7,21 +7,21 @@ import { headers } from 'next/headers';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
-import { DEPLOY_URL, VERCEL_ENV } from '@/constants';
-import { PHProvider } from '@/providers/posthog';
-import { alexandriaFont, handjetFont, vcrFont } from '@/lib/fonts';
+import { getMessages } from 'next-intl/server';
+import { Container } from '@/components/ui/container';
+import { CookieConsentModal } from '@/components/ui/cookie-consent-modal';
+import { Footer } from '@/components/ui/footer';
 import { MobileHeader } from '@/components/ui/header-mobile';
+import { DEPLOY_URL, VERCEL_ENV } from '@/constants';
+import { alexandriaFont, handjetFont, vcrFont } from '@/lib/fonts';
+import { SOCIAL_LINKS } from '@/lib/social-links';
+import { LocaleLink } from '@/navigation';
+import { PHProvider } from '@/providers/posthog';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '@/styles/consent-cookie.css';
 import '@/styles/global.css';
-import { Footer } from '@/components/ui/footer';
-import { Container } from '@/components/ui/container';
-import { CookieConsentModal } from '@/components/ui/cookie-consent-modal';
 import { SupportedLocales } from '@/types';
-import { LocaleLink } from '@/navigation';
-import { SOCIAL_LINKS } from '@/lib/social-links';
-import { getMessages } from 'next-intl/server';
 
 export const metadata: Metadata = {
   title: {
@@ -78,7 +78,7 @@ export default async function LocaleLayout({
   children,
   params: { locale },
 }: PropsWithChildren<{ params: { locale: SupportedLocales } }>) {
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   if (!messages) {
     console.warn('No translation messages found for locale: ', locale);

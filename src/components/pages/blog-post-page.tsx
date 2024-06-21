@@ -5,9 +5,9 @@ import { useRouter } from 'next/navigation';
 import blogPlaceholderImage1 from '@/assets/images/blog-post-placeholder-1.png';
 import blogPlaceholderImage2 from '@/assets/images/blog-post-placeholder-2.png';
 import blogPlaceholderImage3 from '@/assets/images/blog-post-placeholder-3.png';
-import { Container } from '@/components/ui/container';
-import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { BlogArticle } from '@/components/ui/blog-article';
+import { Breadcrumb } from '@/components/ui/breadcrumb';
+import { Container } from '@/components/ui/container';
 import { RecentPostsBlock } from '@/components/ui/recent-posts-block';
 import { Post } from '@/types';
 

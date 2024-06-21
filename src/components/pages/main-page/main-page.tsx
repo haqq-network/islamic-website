@@ -2,20 +2,20 @@ import { Fragment } from 'react';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import { useTranslations } from 'next-intl';
-import { Member } from '@/components/ui/member-card';
-import { FundsBlock } from './funds-block';
-import { FinanceBlock } from './finance-block';
-import { BoardMembersBlock } from './board-members-block';
-import { NewsBlock } from './news-block';
-import { LearnAndGrowBlock } from './learn-and-grow-block';
-import { JoinCommunityBlock } from './join-community-block';
 import { Container } from '@/components/ui/container';
-import { HeroBlock } from './hero-block';
 import { Marquee } from '@/components/ui/marquee';
+import { Member } from '@/components/ui/member-card';
 import { MoonAnimatedBg } from '@/components/ui/moon-animated-background';
-import { WhyBlock } from './why-block';
-import { ChainStats } from '@/utils/get-chain-stats-data';
 import { NewsPost } from '@/types';
+import { ChainStats } from '@/utils/get-chain-stats-data';
+import { BoardMembersBlock } from './board-members-block';
+import { FinanceBlock } from './finance-block';
+import { FundsBlock } from './funds-block';
+import { HeroBlock } from './hero-block';
+import { JoinCommunityBlock } from './join-community-block';
+import { LearnAndGrowBlock } from './learn-and-grow-block';
+import { NewsBlock } from './news-block';
+import { WhyBlock } from './why-block';
 
 const WalletBlock = dynamic(
   async () => {

@@ -1,10 +1,10 @@
+import type { Metadata } from 'next';
 import { MarketsPage } from '@/components/pages/markets-page';
 import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 import { SupportedLocales } from '@/types';
 import { getPriceFromFalconer } from '@/utils/get-price';
 import { createCurrencyFormatter } from '@/utils/locale-utils';
-import type { Metadata } from 'next';
 
 const title = 'Markets';
 const description = '';

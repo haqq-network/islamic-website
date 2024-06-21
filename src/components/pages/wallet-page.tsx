@@ -6,14 +6,14 @@ import { useTranslations } from 'next-intl';
 import { usePostHog } from 'posthog-js/react';
 import bgImgData from '@/assets/images/wallet-bg.webp';
 import phoneImgData from '@/assets/images/wallet-iphone-screenshot.webp';
-import { getDynamicLink } from '@/utils/get-dynamic-link';
-import { Text } from '@/components/ui/text';
+import { Container } from '@/components/ui/container';
 import { RatingBadge } from '@/components/ui/rating-badge';
+import { Text } from '@/components/ui/text';
 import {
   WalletDownloadButton,
   WalletDownloadWithQrButton,
 } from '@/components/ui/wallet-download-button';
-import { Container } from '@/components/ui/container';
+import { getDynamicLink } from '@/utils/get-dynamic-link';
 
 export function WalletPage({
   storeRatings,

@@ -11,18 +11,18 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import fatwaStarsImgData from '@/assets/images/fatwa-stars.jpg';
-import { MemberCard } from '@/components/ui/member-card';
 import { Container } from '@/components/ui/container';
-import { Text } from '@/components/ui/text';
-import { ScrollSpySection } from '@/components/ui/scrollspy';
-import { ShariahPageMobileNav } from '@/components/ui/shariah-page-mobile-nav';
 import { FatwaBlock } from '@/components/ui/fatwa-block';
 import { FoundationsBlock } from '@/components/ui/foundations-block';
-import { ShariahBlock } from '@/components/ui/shariah-block';
+import { MemberCard } from '@/components/ui/member-card';
 import { MemberModalCard } from '@/components/ui/member-modal-card';
 import { Modal } from '@/components/ui/modal';
-import { Member, SupportedLocales } from '@/types';
+import { ScrollSpySection } from '@/components/ui/scrollspy';
+import { ShariahBlock } from '@/components/ui/shariah-block';
+import { ShariahPageMobileNav } from '@/components/ui/shariah-page-mobile-nav';
+import { Text } from '@/components/ui/text';
 import { LocaleLink } from '@/navigation';
+import { Member, SupportedLocales } from '@/types';
 
 function MembersContainer({
   members,

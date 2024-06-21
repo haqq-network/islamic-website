@@ -6,15 +6,15 @@ import { useTranslations } from 'next-intl';
 import { usePostHog } from 'posthog-js/react';
 import halfIphoneImgData from '@/assets/images/half-iphone.jpg';
 import iphoneImgData from '@/assets/images/iphone.jpg';
-import { getDynamicLink } from '@/utils/get-dynamic-link';
 import { Container } from '@/components/ui/container';
 import { GradientText } from '@/components/ui/gradient-text';
-import { Text } from '@/components/ui/text';
 import { RatingBadge } from '@/components/ui/rating-badge';
+import { Text } from '@/components/ui/text';
 import {
   WalletDownloadButton,
   WalletDownloadWithQrButton,
 } from '@/components/ui/wallet-download-button';
+import { getDynamicLink } from '@/utils/get-dynamic-link';
 
 export function WalletBlock({
   storeRatings,

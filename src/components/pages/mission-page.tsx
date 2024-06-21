@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import missionRockImgData from '@/assets/images/mission-rock.webp';
 import missionStarImgData from '@/assets/images/mission-star.webp';
-import { GradientText } from '@/components/ui/gradient-text';
 import { Container } from '@/components/ui/container';
+import { GradientText } from '@/components/ui/gradient-text';
 import { Text } from '@/components/ui/text';
 
 function MissionPageHeading({ children }: PropsWithChildren) {

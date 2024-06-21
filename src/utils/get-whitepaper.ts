@@ -1,5 +1,4 @@
 import { cache } from 'react';
-
 import { FALCONER_ENDPOINT, REVALIDATE_TIME } from '@/constants';
 import { NextRequestInit } from '@/types';
 

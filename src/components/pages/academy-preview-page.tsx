@@ -9,15 +9,15 @@ import {
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Container } from '@/components/ui/container';
-import { Text } from '@/components/ui/text';
-import { AcademyLesson } from '@/types';
-import { Modal, ModalCloseButton } from '@/components/ui/modal';
+import { SubscribeForm } from '@/components/forms/subscribe-form';
 import { PlayVideoIcon } from '@/components/icons';
+import { Container } from '@/components/ui/container';
+import { Modal, ModalCloseButton } from '@/components/ui/modal';
+import { Text } from '@/components/ui/text';
+import { env } from '@/env/client';
 import { useActiveLesson } from '@/hooks/use-active-lesson';
 import { academyModules } from '@/lib/academy-modules';
-import { SubscribeForm } from '@/components/forms/subscribe-form';
-import { env } from '@/env/client';
+import { AcademyLesson } from '@/types';
 
 export function AcademyPreviewPage() {
   const [locale, setLocale] = useState('en-US');

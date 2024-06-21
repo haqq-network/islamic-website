@@ -1,9 +1,9 @@
 'use-client';
 import { Fragment, useEffect, useMemo, useState } from 'react';
 import clsx from 'clsx';
-import { Select } from './select';
-import { Container } from './container';
 import { LocaleLink } from '@/navigation';
+import { Container } from './container';
+import { Select } from './select';
 
 export function ShariahPageMobileNav({
   sections,

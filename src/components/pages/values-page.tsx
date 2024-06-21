@@ -2,9 +2,9 @@ import { PropsWithChildren } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import glowCubeImgData from '@/assets/images/glow-cube.jpg';
-import { Text } from '@/components/ui/text';
 import { Container } from '@/components/ui/container';
 import { GradientText } from '@/components/ui/gradient-text';
+import { Text } from '@/components/ui/text';
 
 function ValuesPageHeading({ children }: PropsWithChildren) {
   return (

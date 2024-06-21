@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
+import { CommunityHubPage } from '@/components/pages/community-hub-page';
 import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 import { SOCIAL_LINKS } from '@/lib/social-links';
-import { CommunityHubPage } from '@/components/pages/community-hub-page';
 
 const title = 'Community hub';
 const description =

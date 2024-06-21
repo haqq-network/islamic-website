@@ -1,9 +1,9 @@
+import type { Metadata } from 'next';
 import { DubaiResidentDisclaimerPage } from '@/components/pages/dubai-residents-disclaimer-page';
 import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 import { SupportedLocales } from '@/types';
 import { getDisclaimerContentFromFalconer } from '@/utils/get-disclaimer';
-import type { Metadata } from 'next';
 
 const title = 'Dubai Residents Disclaimer';
 const description = '';

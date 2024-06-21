@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
+import { ShariahPage } from '@/components/pages/shariah-page';
 import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
+import { SupportedLocales } from '@/types';
 import { getFatwaContentFromFalconer } from '@/utils/get-fatwa';
 import { getMembersContentFromFalconer } from '@/utils/get-members';
-import { ShariahPage } from '@/components/pages/shariah-page';
-import { SupportedLocales } from '@/types';
 
 const title = 'Shariah';
 const description =

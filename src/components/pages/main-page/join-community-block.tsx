@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import cubesImgData from '@/assets/images/cubes.jpg';
-import { Container } from '@/components/ui/container';
-import { LocaleLink } from '@/navigation';
-import { Text } from '@/components/ui/text';
 import { Button } from '@/components/ui/button';
+import { Container } from '@/components/ui/container';
+import { Text } from '@/components/ui/text';
+import { LocaleLink } from '@/navigation';
 
 export function JoinCommunityBlock() {
   const t = useTranslations('index-page');

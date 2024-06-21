@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import { Text } from '@/components/ui/text';
-import { GradientText } from '@/components/ui/gradient-text';
 import { Container } from '@/components/ui/container';
+import { GradientText } from '@/components/ui/gradient-text';
+import { Text } from '@/components/ui/text';
 
 type StarColor = 'purple' | 'orange' | 'green';
 

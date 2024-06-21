@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import MODULES from '@/assets/academy-modules.json';
 import { useLocale } from 'next-intl';
+import MODULES from '@/assets/academy-modules.json';
 import { AcademyModulesJson } from '@/types';
 
 export function useActiveLesson(

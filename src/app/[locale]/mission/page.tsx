@@ -1,6 +1,6 @@
+import type { Metadata } from 'next';
 import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
-import type { Metadata } from 'next';
 
 const title = 'Mission';
 const description =

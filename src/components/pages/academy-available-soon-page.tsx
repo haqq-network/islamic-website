@@ -2,8 +2,8 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import availableSoonBgImgData from '@/assets/images/available-soon-bg.webp';
 import { Container } from '@/components/ui/container';
-import { LocaleLink } from '@/navigation';
 import { Text } from '@/components/ui/text';
+import { LocaleLink } from '@/navigation';
 
 export function AvailableSoonPage() {
   const t = useTranslations('available-soon-page');

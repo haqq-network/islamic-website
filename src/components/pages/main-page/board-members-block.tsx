@@ -1,13 +1,13 @@
 'use client';
 import { useCallback, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Member } from '@/components/ui/member-card';
 import { Container } from '@/components/ui/container';
-import { GradientText } from '@/components/ui/gradient-text';
 import { FilterButton } from '@/components/ui/filter-button';
-import { NewMemberCard } from '@/components/ui/new-member-card';
-import { Modal } from '@/components/ui/modal';
+import { GradientText } from '@/components/ui/gradient-text';
+import { Member } from '@/components/ui/member-card';
 import { MemberModalCard } from '@/components/ui/member-modal-card';
+import { Modal } from '@/components/ui/modal';
+import { NewMemberCard } from '@/components/ui/new-member-card';
 
 type BoardMembers = 'advisory' | 'executive' | 'shariah';
 

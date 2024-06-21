@@ -1,10 +1,10 @@
+import { Fragment } from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Fragment } from 'react';
 import teamPageBgImageData from '@/assets/images/team-page-bg.svg';
-import { MembersContainer } from '@/components/ui/members-container';
 import { Container } from '@/components/ui/container';
+import { MembersContainer } from '@/components/ui/members-container';
 import { Member } from '@/types';
 
 function TeamPageBg() {

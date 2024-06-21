@@ -1,9 +1,9 @@
+import type { Metadata } from 'next';
 import { PrivacyPolicyPage } from '@/components/pages/privacy-policy-page';
 import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 import { SupportedLocales } from '@/types';
 import { getPrivacyPolicyContentFromFalconer } from '@/utils/get-privacy-policy';
-import type { Metadata } from 'next';
 
 const title = 'Privacy Policy';
 

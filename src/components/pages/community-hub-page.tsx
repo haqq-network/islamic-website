@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import bgImgData from '@/assets/images/community-hub-bg-image.svg';
 import {
   DiscordIcon,
   FacebookIcon,
@@ -13,7 +14,6 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from '@/components/icons';
-import bgImgData from '@/assets/images/community-hub-bg-image.svg';
 import { Container } from '@/components/ui/container';
 import { Text } from '@/components/ui/text';
 

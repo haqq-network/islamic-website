@@ -5,17 +5,17 @@ import kucoinLogoImageData from '@/assets/images/exchanges/kucoin.svg';
 import lbankLogoImageData from '@/assets/images/exchanges/lbank.png';
 import mexcLogoImageData from '@/assets/images/exchanges/mexc.svg';
 import osmosisLogoImageData from '@/assets/images/exchanges/osmosis.svg';
-import bgPageImageData from '@/assets/images/markets-page-background.svg';
 import sushiLogoImageData from '@/assets/images/exchanges/sushi.svg';
 import uniswapLogoImageData from '@/assets/images/exchanges/uniswap.svg';
 import xtLogoImageData from '@/assets/images/exchanges/xt.svg';
-import { Container } from '@/components/ui/container';
+import bgPageImageData from '@/assets/images/markets-page-background.svg';
 import { IslamicLogoIcon } from '@/components/icons';
-import { Text } from '@/components/ui/text';
 import { CEXCard } from '@/components/ui/cex-card';
+import { Container } from '@/components/ui/container';
 import { DEXBlock } from '@/components/ui/dex-block';
-import { OnamperCard } from '@/components/ui/onramper-card';
 import { DEXCard } from '@/components/ui/dex-card';
+import { OnamperCard } from '@/components/ui/onramper-card';
+import { Text } from '@/components/ui/text';
 
 const dexData: Array<{
   name: string;

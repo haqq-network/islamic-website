@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
+import { TeamPage } from '@/components/pages/team-page';
 import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
-import { getMembersContentFromFalconer } from '@/utils/get-members';
-import { TeamPage } from '@/components/pages/team-page';
 import { SupportedLocales } from '@/types';
+import { getMembersContentFromFalconer } from '@/utils/get-members';
 
 const title = 'Team';
 const description =

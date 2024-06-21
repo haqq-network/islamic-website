@@ -2,17 +2,17 @@
 import clsx from 'clsx';
 import { QRCodeSVG } from 'qrcode.react';
 import {
-  AndroidLogoIcon,
-  AppStoreLogoIcon,
-  GooglePlayLogoIcon,
-  QrCodeIcon,
-} from '../icons';
-import {
   Popover,
   PopoverContent,
   PopoverTrigger,
   useHoverPopover,
 } from './popover';
+import {
+  AndroidLogoIcon,
+  AppStoreLogoIcon,
+  GooglePlayLogoIcon,
+  QrCodeIcon,
+} from '../icons';
 
 export function WalletDownloadButton({
   className,

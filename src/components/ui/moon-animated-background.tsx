@@ -2,8 +2,8 @@
 import { useCallback, useState } from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
-import { Container } from './container';
 import moonImageData from '@/assets/images/moon.webp';
+import { Container } from './container';
 
 function delay(milliseconds: number): Promise<void> {
   return new Promise((resolve) => {

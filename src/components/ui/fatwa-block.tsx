@@ -8,9 +8,9 @@ import fatwaSign3 from '@/assets/images/autographs/autograph-hakim-mohamed.webp'
 import fatwaSign4 from '@/assets/images/autographs/autograph-mohamed-zoeir.webp';
 import fatwaSign2 from '@/assets/images/autographs/autograph-saleh-yaqubi.webp';
 import { SupportedLocales } from '@/types';
-import { Text } from './text';
 import { DownloadPDFButton } from './download-pdf-button';
 import { MarkdownText } from './markdown-text';
+import { Text } from './text';
 
 // const { Link } = createSharedPathnamesNavigation({
 //   locales: ['en', 'ar', 'id'],

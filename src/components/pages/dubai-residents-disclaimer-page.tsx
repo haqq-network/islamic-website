@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import moonImageData from '@/assets/images/moon.webp';
 import { Container } from '@/components/ui/container';
 import { MarkdownText } from '@/components/ui/markdown-text';
-import moonImageData from '@/assets/images/moon.webp';
 
 function HeroBg() {
   return (

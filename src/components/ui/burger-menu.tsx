@@ -7,6 +7,7 @@ import {
 } from 'react';
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
+import { LocaleLink } from '@/navigation';
 import {
   AcademyIcon,
   AlertIcon,
@@ -24,7 +25,6 @@ import {
   StarIcon,
   ValuesIcon,
 } from '../icons/header-icons';
-import { LocaleLink } from '@/navigation';
 
 function BurgerMenuDropdownLink({
   icon,

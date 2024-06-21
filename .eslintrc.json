@@ -1,7 +1,7 @@
 {
   "root": true,
   "ignorePatterns": ["!**/*", ".next/**/*", "storybook-static"],
-  "plugins": ["@nx"],
+  "plugins": ["@nx", "import", "prettier"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
@@ -20,5 +20,37 @@
       }
     }
   ],
-  "extends": ["plugin:@nx/react-typescript", "next", "next/core-web-vitals"]
+  "extends": ["plugin:@nx/react-typescript", "next", "next/core-web-vitals"],
+  "rules": {
+    "arrow-body-style": ["error", "always"],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling", "index"]
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@/**",
+            "group": "internal"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "never"
+      }
+    ],
+    "prettier/prettier": "error"
+  }
 }

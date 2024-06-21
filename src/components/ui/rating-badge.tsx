@@ -1,5 +1,5 @@
-import { RatingStarIcon } from '../icons';
 import { Text } from './text';
+import { RatingStarIcon } from '../icons';
 
 const ratingStars = Array.from({ length: 5 }, (_, i) => {
   return <RatingStarIcon key={i} />;

@@ -13,9 +13,9 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useInViewport } from 'react-in-viewport';
 import haqqLogoImgData from '@/assets/images/haqq-logo.webp';
-import { Text } from '@/components/ui/text';
-import { Heading } from '@/components/ui/heading';
 import { MemoizedAnimatedNumbers } from '@/components/ui/animated-numbers';
+import { Heading } from '@/components/ui/heading';
+import { Text } from '@/components/ui/text';
 
 export interface ChainStats {
   mainnetAccountsCreated: number;

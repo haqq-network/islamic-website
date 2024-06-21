@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { BlogPage } from '@/components/pages/blog-page';
-import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 import { DEPLOY_URL } from '@/constants';
+import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 import { getIslamicBlogPostsFromFalconer } from '@/utils/get-blog-posts';
 
 export const dynamic = 'force-dynamic';

@@ -1,10 +1,10 @@
 import { useTranslations } from 'next-intl';
-import { NewsBlock } from '@/components/ui/news-block';
-import { Container } from '@/components/ui/container';
-import { Text } from '@/components/ui/text';
-import { NewsPost } from '@/types';
 import { SubscribeForm } from '@/components/forms/subscribe-form';
+import { Container } from '@/components/ui/container';
+import { NewsBlock } from '@/components/ui/news-block';
+import { Text } from '@/components/ui/text';
 import { env } from '@/env/client';
+import { NewsPost } from '@/types';
 
 export function NewsPage({ news }: { news?: NewsPost[] }) {
   const t = useTranslations();

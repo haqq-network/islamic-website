@@ -1,8 +1,8 @@
 'use client';
+import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { LessonsBlock } from '@/components/ui/lessons-block';
 import { Text } from '@/components/ui/text';
-import { useTranslations } from 'next-intl';
 import { LocaleLink } from '@/navigation';
 
 export function AcademyModulesPage({

@@ -2,12 +2,12 @@
 import { useCallback, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import youtubeVideoPlaceholderImage from '@/assets/images/desert-preview.webp';
+import { PlayVideoIcon } from '@/components/icons';
 import { GradientText } from '@/components/ui/gradient-text';
+import { Modal, ModalCloseButton } from '@/components/ui/modal';
 import { Text } from '@/components/ui/text';
 import { LocaleLink } from '@/navigation';
-import { PlayVideoIcon } from '@/components/icons';
-import { Modal, ModalCloseButton } from '@/components/ui/modal';
-import youtubeVideoPlaceholderImage from '@/assets/images/desert-preview.webp';
 
 const MODAL_YOUTUBE_VIDEO_ID = 'bevF9a3L3Sk';
 

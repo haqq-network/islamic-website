@@ -1,11 +1,11 @@
 import { useTranslations } from 'next-intl';
+import { SubscribeForm } from '@/components/forms/subscribe-form';
 import { Container } from '@/components/ui/container';
 import { FeaturedPostBlock } from '@/components/ui/featured-post-block';
 import { PostsBlock } from '@/components/ui/posts-block';
 import { Text } from '@/components/ui/text';
-import { Post } from '@/types';
-import { SubscribeForm } from '@/components/forms/subscribe-form';
 import { env } from '@/env/client';
+import { Post } from '@/types';
 
 function BlockPageHeader() {
   const t = useTranslations();

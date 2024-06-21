@@ -8,16 +8,16 @@ import { usePostHog } from 'posthog-js/react';
 import { useForm } from 'react-hook-form';
 import Turnstile from 'react-turnstile';
 import * as yup from 'yup';
+import { Button } from '@/components/ui/button';
+import { InputState } from '@/components/ui/input';
+import { Modal, ModalCloseButton } from '@/components/ui/modal';
+import { Text } from '@/components/ui/text';
+import { LocaleLink } from '@/navigation';
 import {
   FormState,
   HookedFormInput,
   SubscribeFormFields,
 } from './hooked-form-input';
-import { LocaleLink } from '@/navigation';
-import { Button } from '@/components/ui/button';
-import { Modal, ModalCloseButton } from '@/components/ui/modal';
-import { Text } from '@/components/ui/text';
-import { InputState } from '@/components/ui/input';
 
 const schema: yup.ObjectSchema<SubscribeFormFields> = yup
   .object({

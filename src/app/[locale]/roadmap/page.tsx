@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
+import { RoadmapPage } from '@/components/pages/roadmap-page';
 import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
-import { getRoadmapContentFromFalconer } from '@/utils/get-roadmap';
-import { RoadmapPage } from '@/components/pages/roadmap-page';
 import { SupportedLocales } from '@/types';
+import { getRoadmapContentFromFalconer } from '@/utils/get-roadmap';
 
 const title = 'Roadmap';
 const description =

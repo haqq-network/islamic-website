@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { DEPLOY_URL } from '@/constants';
-import { getWhitepaperContentFromFalconer } from '@/utils/get-whitepaper';
-import { SupportedLocales } from '@/types';
-import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 import { WhitepaperPage } from '@/components/pages/whitepaper-page';
+import { DEPLOY_URL } from '@/constants';
+import { islamicOpenGraphImages } from '@/lib/shared-metadata';
+import { SupportedLocales } from '@/types';
+import { getWhitepaperContentFromFalconer } from '@/utils/get-whitepaper';
 
 const title = 'Whitepaper';
 const description =

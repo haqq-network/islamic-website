@@ -1,5 +1,5 @@
-import { LocaleLink } from '@/navigation';
 import { ReactNode } from 'react';
+import { LocaleLink } from '@/navigation';
 
 export function DropdownLink({
   icon,

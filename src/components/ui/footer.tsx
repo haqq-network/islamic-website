@@ -1,6 +1,9 @@
 import { ReactNode, useMemo } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { LocaleLink } from '@/navigation';
+import { Container } from './container';
 import {
   DiscordIcon,
   GithubIcon,
@@ -10,9 +13,6 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from '../icons';
-import { Container } from './container';
-import { LocaleLink } from '@/navigation';
-import Link from 'next/link';
 
 interface FooterNavLink {
   url: string;

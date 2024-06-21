@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import notFoundBgImgData from '@/assets/images/not-found-bg.webp';
-import { Container } from './container';
 import { LocaleLink } from '@/navigation';
+import { Container } from './container';
 import { Text } from './text';
 
 export function NotFound() {

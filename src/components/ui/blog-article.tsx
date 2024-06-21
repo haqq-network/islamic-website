@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
-import { CopyIcon } from '../icons';
 import { MarkdownText } from './markdown-text';
 import { Tooltip } from './tooltip';
+import { CopyIcon } from '../icons';
 
 export function BlogArticle({
   content,

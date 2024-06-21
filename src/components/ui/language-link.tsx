@@ -1,6 +1,6 @@
+import clsx from 'clsx';
 import { LocaleLink } from '@/navigation';
 import { SupportedLocales } from '@/types';
-import clsx from 'clsx';
 import { CheckMarkIcon } from '../icons/header-icons';
 
 export const localeDisplayNames: Record<string, string> = {

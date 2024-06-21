@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
-import { MarkdownText } from '@/components/ui/markdown-text';
-import { DownloadPDFButton } from '@/components/ui/download-pdf-button';
-import { MoonAnimatedBg } from '@/components/ui/moon-animated-background';
 import { Container } from '@/components/ui/container';
+import { DownloadPDFButton } from '@/components/ui/download-pdf-button';
+import { MarkdownText } from '@/components/ui/markdown-text';
+import { MoonAnimatedBg } from '@/components/ui/moon-animated-background';
 
 export function WhitepaperPage({ whitepaper }: { whitepaper?: string }) {
   const t = useTranslations('whitepaper-page');

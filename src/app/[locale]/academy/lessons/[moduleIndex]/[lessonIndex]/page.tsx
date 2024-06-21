@@ -1,7 +1,7 @@
-import { islamicOpenGraphImages } from '@/lib/shared-metadata';
+import type { Metadata } from 'next';
 import { AcademyModulesPage } from '@/components/pages/academy-modules-page';
 import { DEPLOY_URL } from '@/constants';
-import type { Metadata } from 'next';
+import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 
 const title = 'Academy';
 const description =

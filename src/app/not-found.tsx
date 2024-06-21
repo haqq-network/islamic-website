@@ -1,8 +1,8 @@
 'use client';
 import type { Metadata } from 'next';
+import Error from 'next/error';
 import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
-import Error from 'next/error';
 
 const title = 'Not Found';
 

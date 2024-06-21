@@ -3,8 +3,8 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import fraudCubesImgData from '@/assets/images/fraud-cubes.webp';
-import { Text } from '@/components/ui/text';
 import { Container } from '@/components/ui/container';
+import { Text } from '@/components/ui/text';
 
 function Alert({ children }: PropsWithChildren) {
   return (

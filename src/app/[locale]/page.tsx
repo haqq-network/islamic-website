@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
+import { MainPage } from '@/components/pages/main-page/main-page';
 import { DEPLOY_URL } from '@/constants';
+import { islamicOpenGraphImages } from '@/lib/shared-metadata';
+import { SupportedLocales } from '@/types';
 import { getChainStatsFromFalconer } from '@/utils/get-chain-stats-data';
 import { getHomePageDataFromFalconer } from '@/utils/get-home-page-data';
 import { getWalletRatings } from '@/utils/get-wallet-ratings';
-import { islamicOpenGraphImages } from '@/lib/shared-metadata';
-import { MainPage } from '@/components/pages/main-page/main-page';
-import { SupportedLocales } from '@/types';
 
 const title = 'IslamicCoin';
 const description =

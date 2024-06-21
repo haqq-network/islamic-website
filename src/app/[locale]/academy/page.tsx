@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
+import { AcademyPreviewPage } from '@/components/pages/academy-preview-page';
 import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
-import { AcademyPreviewPage } from '@/components/pages/academy-preview-page';
 
 const title = 'Academy';
 const description =
@@ -18,6 +18,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Page() {
+export default function AcademyPage() {
   return <AcademyPreviewPage />;
 }
