@@ -42,7 +42,6 @@ export function MainPage({
     googlePlay: number;
   };
 }) {
-  console.log({ storeRatings });
   return (
     <Fragment>
       <Hero stats={stats} />
