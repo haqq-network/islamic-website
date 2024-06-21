@@ -13,8 +13,8 @@ import {
   WalletDownloadButton,
   WalletDownloadWithQrButton,
 } from '@/components/ui/wallet-download-button';
-import { getDynamicLink } from '@/utils/get-dynamic-link';
 import { WALLET_LINK_APPLE, WALLET_LINK_GOOGLE } from '@/constants';
+import { getDynamicLink } from '@/utils/get-dynamic-link';
 
 export function WalletPage({
   storeRatings,
@@ -32,8 +32,8 @@ export function WalletPage({
 
     if (!distinctId) {
       return {
-        appStoreLink: null,
-        playMarketLink: null,
+        appStoreLink: WALLET_LINK_APPLE,
+        playMarketLink: WALLET_LINK_GOOGLE,
       };
     }
 
@@ -82,7 +82,7 @@ export function WalletPage({
       <div className="hidden lg:mt-[24px] lg:flex lg:flex-row lg:flex-wrap lg:gap-[16px]">
         <div className="w-fit">
           <Link
-            href={appStoreLink ?? WALLET_LINK_APPLE}
+            href={appStoreLink}
             target="_blank"
             rel="noopener noreferrer"
             data-attr="download-ios"
@@ -90,13 +90,13 @@ export function WalletPage({
             <WalletDownloadWithQrButton
               type="apple"
               title={t('stores.download-button.title')}
-              link={appStoreLink ?? WALLET_LINK_APPLE}
+              link={appStoreLink}
             />
           </Link>
         </div>
         <div className="w-fit">
           <Link
-            href={playMarketLink ?? WALLET_LINK_GOOGLE}
+            href={playMarketLink}
             target="_blank"
             rel="noopener noreferrer"
             data-attr="download-android"
@@ -104,7 +104,7 @@ export function WalletPage({
             <WalletDownloadWithQrButton
               type="google"
               title={t('stores.download-button.title')}
-              link={playMarketLink ?? WALLET_LINK_GOOGLE}
+              link={playMarketLink}
             />
           </Link>
         </div>
@@ -123,7 +123,7 @@ export function WalletPage({
 
       <div className="mt-[28px] flex flex-col gap-y-[20px] lg:hidden">
         <Link
-          href={appStoreLink ?? WALLET_LINK_APPLE}
+          href={appStoreLink}
           target="_blank"
           rel="noopener noreferrer"
           data-attr="download-ios"
@@ -135,7 +135,7 @@ export function WalletPage({
         </Link>
 
         <Link
-          href={playMarketLink ?? WALLET_LINK_GOOGLE}
+          href={playMarketLink}
           target="_blank"
           rel="noopener noreferrer"
           data-attr="download-android"

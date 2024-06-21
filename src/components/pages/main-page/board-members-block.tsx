@@ -1,11 +1,11 @@
 'use client';
 import { useCallback, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { BoardMemberCard } from '@/components/ui/board-member-card';
 import { Container } from '@/components/ui/container';
 import { FilterButton } from '@/components/ui/filter-button';
 import { GradientText } from '@/components/ui/gradient-text';
 import { MemberModalCard } from '@/components/ui/member-modal-card';
-import { BoardMemberCard } from '@/components/ui/board-member-card';
 import { Modal } from '@/components/ui/modal';
 import { Member } from '@/types';
 
