@@ -42,7 +42,7 @@ export function MemberCard({
         />
       </div>
       <div className="flex h-full flex-col">
-        <div className="min-h-[48px] text-start text-[13px] leading-[20px] md:text-[14px] lg:text-base">
+        <div className="min-h-[48px] text-start text-[13px] leading-[18px] md:text-[14px] lg:text-base">
           {title}
         </div>
         <div className="flex h-full flex-col justify-between">

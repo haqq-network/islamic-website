@@ -3,18 +3,18 @@ import { Fragment, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { usePostHog } from 'posthog-js/react';
+// import { usePostHog } from 'posthog-js/react';
 import bgImgData from '@/assets/images/wallet-bg.webp';
 import phoneImgData from '@/assets/images/wallet-iphone-screenshot.webp';
 import { Container } from '@/components/ui/container';
 import { RatingBadge } from '@/components/ui/rating-badge';
 import { Text } from '@/components/ui/text';
-import {
-  WalletDownloadButton,
-  WalletDownloadWithQrButton,
-} from '@/components/ui/wallet-download-button';
-import { WALLET_LINK_APPLE, WALLET_LINK_GOOGLE } from '@/constants';
-import { getDynamicLink } from '@/utils/get-dynamic-link';
+// import {
+//   WalletDownloadButton,
+//   WalletDownloadWithQrButton,
+// } from '@/components/ui/wallet-download-button';
+// import { WALLET_LINK_APPLE, WALLET_LINK_GOOGLE } from '@/constants';
+// import { getDynamicLink } from '@/utils/get-dynamic-link';
 
 export function WalletPage({
   storeRatings,
@@ -25,31 +25,31 @@ export function WalletPage({
   };
 }) {
   const t = useTranslations('wallet-page');
-  const posthog = usePostHog();
+  // const posthog = usePostHog();
 
-  const { appStoreLink, playMarketLink } = useMemo(() => {
-    const distinctId = posthog.get_distinct_id();
+  // const { appStoreLink, playMarketLink } = useMemo(() => {
+  //   const distinctId = posthog.get_distinct_id();
 
-    if (!distinctId) {
-      return {
-        appStoreLink: WALLET_LINK_APPLE,
-        playMarketLink: WALLET_LINK_GOOGLE,
-      };
-    }
+  //   if (!distinctId) {
+  //     return {
+  //       appStoreLink: WALLET_LINK_APPLE,
+  //       playMarketLink: WALLET_LINK_GOOGLE,
+  //     };
+  //   }
 
-    return {
-      appStoreLink: getDynamicLink(
-        'https://haqq.network/wallet',
-        distinctId,
-        WALLET_LINK_APPLE,
-      ),
-      playMarketLink: getDynamicLink(
-        'https://haqq.network/wallet',
-        distinctId,
-        WALLET_LINK_GOOGLE,
-      ),
-    };
-  }, [posthog]);
+  //   return {
+  //     appStoreLink: getDynamicLink(
+  //       'https://haqq.network/wallet',
+  //       distinctId,
+  //       WALLET_LINK_APPLE,
+  //     ),
+  //     playMarketLink: getDynamicLink(
+  //       'https://haqq.network/wallet',
+  //       distinctId,
+  //       WALLET_LINK_GOOGLE,
+  //     ),
+  //   };
+  // }, [posthog]);
 
   const content = (
     <Fragment>
@@ -79,7 +79,8 @@ export function WalletPage({
           <RatingBadge rating={storeRatings.googlePlay} />
         </div>
       </div>
-      <div className="hidden lg:mt-[24px] lg:flex lg:flex-row lg:flex-wrap lg:gap-[16px]">
+
+      {/* <div className="hidden lg:mt-[24px] lg:flex lg:flex-row lg:flex-wrap lg:gap-[16px]">
         <div className="w-fit">
           <Link
             href={appStoreLink}
@@ -119,9 +120,9 @@ export function WalletPage({
             <WalletDownloadButton type="apk" />
           </Link>
         </div>
-      </div>
+      </div> */}
 
-      <div className="mt-[28px] flex flex-col gap-y-[20px] lg:hidden">
+      {/* <div className="mt-[28px] flex flex-col gap-y-[20px] lg:hidden">
         <Link
           href={appStoreLink}
           target="_blank"
@@ -157,7 +158,7 @@ export function WalletPage({
             <WalletDownloadButton type="apk" />
           </Link>
         </div>
-      </div>
+      </div> */}
 
       <div className="mt-[24px] text-[13px] leading-[20px] md:text-[16px] lg:text-[#F5F5F580]">
         You can find more supported wallets{' '}

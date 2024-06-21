@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import clsx from 'clsx';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { Marquee } from '@/components/ui/marquee';
@@ -16,13 +16,13 @@ import { LearnAndGrowBlock } from './learn-and-grow-block';
 import { NewsBlock } from './news-block';
 import { WhyBlock } from './why-block';
 
-const WalletBlock = dynamic(
-  async () => {
-    const { WalletBlock } = await import('./wallet-block');
-    return { default: WalletBlock };
-  },
-  // { ssr: false },
-);
+// const WalletBlock = dynamic(
+//   async () => {
+//     const { WalletBlock } = await import('./wallet-block');
+//     return { default: WalletBlock };
+//   },
+//   // { ssr: false },
+// );
 
 export function MainPage({
   news,
@@ -53,7 +53,7 @@ export function MainPage({
         shariahMembers={shariahMembers}
         advisoryMembers={advisoryMembers}
       />
-      <WalletBlock storeRatings={storeRatings} />
+      {/* <WalletBlock storeRatings={storeRatings} /> */}
       <LearnAndGrowBlock />
       <JoinCommunityBlock />
     </Fragment>
