@@ -3,11 +3,8 @@ name: 'CodeQL'
 on:
   push:
     branches:
-      - dev
-      - prod
+      - main
   pull_request:
-    branches:
-      - dev
   schedule:
     - cron: '0 8 * * 1'
   merge_group:
@@ -28,11 +25,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
           queries: security-and-quality
           languages: ${{ matrix.language }}
       - name: Autobuild
-        uses: github/codeql-action/autobuild@v2
+        uses: github/codeql-action/autobuild@v3
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
