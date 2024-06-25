@@ -1,6 +1,5 @@
 import { MetadataRoute } from 'next';
-import { SITE_URL } from '@/constants';
-import { SUPPORTED_LOCALES } from '@/constants';
+import { SITE_URL, SUPPORTED_LOCALES } from '@/constants';
 import { academyModules } from '@/lib/academy-modules';
 
 export interface SitemapUrl {

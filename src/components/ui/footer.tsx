@@ -248,7 +248,7 @@ export function Footer({
       </div>
       <div className="py-[16px] md:py-[24px] lg:py-[36px]">
         <Container>
-          <div className="flex w-full items-center justify-between text-[12px] font-[300] leading-[18px] md:text-[13px] md:leading-[20px] lg:text-[14px] lg:leading-[20px]">
+          <div className="flex w-full flex-col items-center justify-center text-[12px] font-[300] leading-[18px] md:flex-row md:justify-between md:text-[13px] md:leading-[20px] lg:text-[14px] lg:leading-[20px]">
             <div>
               © {new Date().getFullYear()} Islamic Coin. All rights reserved
             </div>

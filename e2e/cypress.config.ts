@@ -6,7 +6,7 @@ export default defineConfig({
     ...nxE2EPreset(__filename, {
       cypressDir: 'src',
       webServerCommands: { default: 'nx run islamic-website:start' },
-      ciWebServerCommand: 'nx run islamic-website:serve-static',
+      ciWebServerCommand: 'nx run islamic-website:start',
     }),
     baseUrl: 'http://localhost:3000',
   },

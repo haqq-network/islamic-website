@@ -104,6 +104,7 @@ export function WalletBlock({
                     <RatingBadge rating={storeRatings.googlePlay} />
                   </div>
                 </div>
+
                 <div className="hidden lg:mt-[24px] lg:flex lg:flex-row lg:gap-x-[16px]">
                   <div className="w-fit">
                     <Link
@@ -138,6 +139,7 @@ export function WalletBlock({
                     </Link>
                   </div>
                 </div>
+
                 <div className="mt-[20px] flex flex-col gap-y-[20px] lg:hidden">
                   <div>
                     <Link
