@@ -12,8 +12,8 @@ importers:
         specifier: 0.26.18
         version: 0.26.18(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@haqq/app-store-scraper':
-        specifier: 1.1.1
-        version: 1.1.1
+        specifier: 1.1.2
+        version: 1.1.2
       '@headlessui/react':
         specifier: 2.1.0
         version: 2.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1427,9 +1427,8 @@ packages:
   '@formatjs/intl-localematcher@0.5.4':
     resolution: {integrity: sha512-zTwEpWOzZ2CiKcB93BLngUX59hQkuZjT2+SAQEscSm52peDW/getsawMcWF1rGRpMCX6D7nSJA3CzJ8gn13N/g==}
 
-  '@haqq/app-store-scraper@1.1.1':
-    resolution: {integrity: sha512-xdbsjf1D/EeV7wN2GfRTYNS2xO3+XXg40mlZdvW9Kg6Y2Rba2OP2A8UNARgBJKaEKliptqPjn7PnfmqRaBwgmQ==}
-    engines: {node: '>=20.10', yarn: '>=4.0'}
+  '@haqq/app-store-scraper@1.1.2':
+    resolution: {integrity: sha512-mmdb5sotJ2JhqvwsYHn2C0l8T7prJFDdbl//d7sAde4TCvHxNm/baO01HAKoteL5L7ZfhzoKGP056EFk1PhZGQ==}
 
   '@headlessui/react@2.1.0':
     resolution: {integrity: sha512-/MizQk2xqR5ELkmCI1xWy3VgJULvR8gcAXtZhcK7sY53TNRCPeMdeODEXKSv9LPSSRlEAyzW1+NGJiaXq6dLRw==}
@@ -10914,7 +10913,7 @@ snapshots:
     dependencies:
       tslib: 2.6.3
 
-  '@haqq/app-store-scraper@1.1.1':
+  '@haqq/app-store-scraper@1.1.2':
     dependencies:
       cheerio: 1.0.0-rc.12
       xml2js: 0.6.2
