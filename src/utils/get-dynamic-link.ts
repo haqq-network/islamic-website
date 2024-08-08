@@ -1,10 +1,10 @@
 export function getDynamicLink(
   link: string,
-  distinctId: string,
+  posthogId: string,
   forwardTo?: string,
 ) {
   const linkIrl = new URL(link);
-  linkIrl.searchParams.append('distinct_id', distinctId);
+  linkIrl.searchParams.append('posthog_id', posthogId);
 
   if (forwardTo) {
     linkIrl.searchParams.append('go_to', forwardTo);
