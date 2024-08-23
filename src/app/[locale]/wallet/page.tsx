@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { WalletPage } from '@/components/pages/wallet-page';
 import { DEPLOY_URL } from '@/constants';
 import { islamicOpenGraphImages } from '@/lib/shared-metadata';
-import { getWalletRatings } from '@/utils/get-wallet-ratings';
 
 const title = 'Wallet';
 const description =
@@ -20,7 +19,5 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const storeRatings = await getWalletRatings();
-
-  return <WalletPage storeRatings={storeRatings} />;
+  return <WalletPage />;
 }
