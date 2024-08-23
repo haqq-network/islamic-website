@@ -23,6 +23,8 @@ export function IdentifyWalletUsers() {
           window.__HAQQWALLET__?.POSTHOG_DISTINCT_ID ??
           posthog.get_distinct_id();
 
+        console.log('IdentifyWalletUsers', { distinctId });
+
         posthog.identify(distinctId);
       }
     }
