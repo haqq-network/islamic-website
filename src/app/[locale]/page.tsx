@@ -5,7 +5,6 @@ import { islamicOpenGraphImages } from '@/lib/shared-metadata';
 import { SupportedLocales } from '@/types';
 import { getChainStatsFromFalconer } from '@/utils/get-chain-stats-data';
 import { getHomePageDataFromFalconer } from '@/utils/get-home-page-data';
-import { getWalletRatings } from '@/utils/get-wallet-ratings';
 
 const title = 'IslamicCoin';
 const description =
@@ -32,7 +31,6 @@ export default async function Page({
   const stats = await getChainStatsFromFalconer();
   const { news, advisoryMembers, executiveMembers, shariahMembers } =
     await getHomePageDataFromFalconer(locale);
-  const storeRatings = await getWalletRatings();
 
   return (
     <MainPage
@@ -41,7 +39,6 @@ export default async function Page({
       advisoryMembers={advisoryMembers}
       executiveMembers={executiveMembers}
       shariahMembers={shariahMembers}
-      storeRatings={storeRatings}
     />
   );
 }

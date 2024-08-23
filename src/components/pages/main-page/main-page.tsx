@@ -21,7 +21,7 @@ const WalletBlock = dynamic(
     const { WalletBlock } = await import('./wallet-block');
     return { default: WalletBlock };
   },
-  // { ssr: false },
+  { ssr: false },
 );
 
 export function MainPage({
@@ -30,19 +30,13 @@ export function MainPage({
   shariahMembers,
   executiveMembers,
   stats,
-  storeRatings,
 }: {
   news?: NewsPost[];
   advisoryMembers: Member[];
   shariahMembers: Member[];
   executiveMembers: Member[];
   stats: ChainStats;
-  storeRatings: {
-    appStore: number;
-    googlePlay: number;
-  };
 }) {
-  console.log({ storeRatings });
   return (
     <Fragment>
       <Hero stats={stats} />
@@ -54,7 +48,7 @@ export function MainPage({
         shariahMembers={shariahMembers}
         advisoryMembers={advisoryMembers}
       />
-      <WalletBlock storeRatings={storeRatings} />
+      <WalletBlock />
       <LearnAndGrowBlock />
       <JoinCommunityBlock />
     </Fragment>
