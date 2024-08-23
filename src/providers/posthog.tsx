@@ -2,7 +2,7 @@
 import { PropsWithChildren, useMemo } from 'react';
 import posthog from 'posthog-js';
 import { PostHogProvider } from 'posthog-js/react';
-import { env } from '@/env/client';
+import { env } from '../env/client';
 
 export function PHProvider({ children }: PropsWithChildren) {
   const postHogInstance = useMemo(() => {
@@ -13,10 +13,13 @@ export function PHProvider({ children }: PropsWithChildren) {
     ) {
       return undefined;
     }
+
     const phInstance = posthog.init(env.NEXT_PUBLIC_POSTHOG_KEY, {
       api_host: '/api/ingest',
       ui_host: env.NEXT_PUBLIC_POSTHOG_HOST,
       capture_pageview: false,
+      capture_pageleave: true,
+      persistence: 'localStorage+cookie',
     });
 
     if (!phInstance) {
