@@ -24,30 +24,23 @@ import { getDynamicLink } from '@/utils/get-dynamic-link';
 export function WalletBlock() {
   const t = useTranslations('index-page');
   const posthog = usePostHog();
+  const distinctId = posthog.get_distinct_id();
 
-  const { appStoreLink, playMarketLink } = useMemo(() => {
-    const distinctId = posthog.get_distinct_id();
+  if (!distinctId) {
+    return null;
+  }
 
-    if (!distinctId) {
-      return {
-        appStoreLink: WALLET_LINK_APPLE,
-        playMarketLink: WALLET_LINK_GOOGLE,
-      };
-    }
+  const appStoreLink = getDynamicLink(
+    'https://haqq.network/wallet',
+    distinctId,
+    'https://apps.apple.com/app/haqq-wallet-by-bored-gen/id6443843352',
+  );
+  const playMarketLink = getDynamicLink(
+    'https://haqq.network/wallet',
+    distinctId,
+    'https://play.google.com/store/apps/details?id=com.haqq.wallet',
+  );
 
-    return {
-      appStoreLink: getDynamicLink(
-        'https://haqq.network/wallet',
-        distinctId,
-        WALLET_LINK_APPLE,
-      ),
-      playMarketLink: getDynamicLink(
-        'https://haqq.network/wallet',
-        distinctId,
-        WALLET_LINK_GOOGLE,
-      ),
-    };
-  }, [posthog]);
 
   return (
     <section>
