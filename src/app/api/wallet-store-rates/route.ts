@@ -6,7 +6,10 @@ export async function GET() {
   const [appStoreResponse, googlePlayResponse] = await Promise.all([
     store.app({ id: 6443843352 }),
     gplay.app({ appId: 'com.haqq.wallet' }),
-  ]);
+  ]).catch((error) => {
+    console.error(error);
+    return [{ score: 0 }, { score: 0 }];
+  });
 
   return NextResponse.json<{
     appStore: number;
