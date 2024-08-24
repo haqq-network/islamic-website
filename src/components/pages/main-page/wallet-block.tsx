@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
