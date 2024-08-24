@@ -1,5 +1,5 @@
 'use client';
-import { Fragment, useEffect, useMemo, useState } from 'react';
+import { Fragment, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -13,19 +13,16 @@ import {
   WalletDownloadButton,
   WalletDownloadWithQrButton,
 } from '@/components/ui/wallet-download-button';
-import { WALLET_LINK_APPLE, WALLET_LINK_GOOGLE } from '@/constants';
-import { getDynamicLink } from '@/utils/get-dynamic-link';
 import {
-  getWalletRatings,
-  WalletStoreRatings,
-} from '@/utils/get-wallet-ratings';
+  STORE_RATINGS,
+  WALLET_LINK_APPLE,
+  WALLET_LINK_GOOGLE,
+} from '@/constants';
+import { getDynamicLink } from '@/utils/get-dynamic-link';
 
 export function WalletPage() {
   const t = useTranslations('wallet-page');
   const posthog = usePostHog();
-  const [storeRatings, setStoreRatings] = useState<WalletStoreRatings | null>(
-    null,
-  );
 
   const { appStoreLink, playMarketLink } = useMemo(() => {
     const distinctId = posthog.get_distinct_id();
@@ -51,12 +48,6 @@ export function WalletPage() {
     };
   }, [posthog]);
 
-  useEffect(() => {
-    getWalletRatings().then((ratings) => {
-      setStoreRatings(ratings);
-    });
-  }, []);
-
   const content = (
     <Fragment>
       <h1 className="text-[46px] font-[600] leading-[52px] md:text-[80px] md:leading-none lg:text-[80px] lg:leading-none">
@@ -71,22 +62,22 @@ export function WalletPage() {
       <div className="mt-[20px] max-w-[600px] text-[13px] md:mt-[24px] md:text-[16px] lg:text-[#F5F5F580]">
         {t('text')}
       </div>
-      {storeRatings && (
-        <div className="mt-[24px] flex gap-x-[24px] md:mt-[36px] md:gap-x-[38px]">
-          <div className="flex flex-col gap-y-[6px]">
-            <span className="text-[10px] uppercase leading-[16px] text-white/50 ltr:font-vcr rtl:font-handjet">
-              {t('stores.app-store')}
-            </span>
-            <RatingBadge rating={storeRatings.appStore} />
-          </div>
-          <div className="flex flex-col gap-y-[6px]">
-            <span className="text-[10px] uppercase leading-[16px] text-white/50 ltr:font-vcr rtl:font-handjet">
-              {t('stores.google-play')}
-            </span>
-            <RatingBadge rating={storeRatings.googlePlay} />
-          </div>
+
+      <div className="mt-[24px] flex gap-x-[24px] md:mt-[36px] md:gap-x-[38px]">
+        <div className="flex flex-col gap-y-[6px]">
+          <span className="text-[10px] uppercase leading-[16px] text-white/50 ltr:font-vcr rtl:font-handjet">
+            {t('stores.app-store')}
+          </span>
+          <RatingBadge rating={STORE_RATINGS.appStore} />
         </div>
-      )}
+        <div className="flex flex-col gap-y-[6px]">
+          <span className="text-[10px] uppercase leading-[16px] text-white/50 ltr:font-vcr rtl:font-handjet">
+            {t('stores.google-play')}
+          </span>
+          <RatingBadge rating={STORE_RATINGS.googlePlay} />
+        </div>
+      </div>
+
       <div className="hidden lg:mt-[24px] lg:flex lg:flex-row lg:flex-wrap lg:gap-[16px]">
         <div className="w-fit">
           <Link

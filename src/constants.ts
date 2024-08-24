@@ -17,3 +17,7 @@ export const WALLET_LINK_APPLE =
   'https://apps.apple.com/app/haqq-wallet-by-bored-gen/id6443843352';
 export const WALLET_LINK_GOOGLE =
   'https://play.google.com/store/apps/details?id=com.haqq.wallet';
+export const STORE_RATINGS = {
+  appStore: 4.8,
+  googlePlay: 4.5,
+};

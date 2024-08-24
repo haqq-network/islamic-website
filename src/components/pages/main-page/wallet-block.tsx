@@ -14,19 +14,16 @@ import {
   WalletDownloadButton,
   WalletDownloadWithQrButton,
 } from '@/components/ui/wallet-download-button';
-import { WALLET_LINK_APPLE, WALLET_LINK_GOOGLE } from '@/constants';
-import { getDynamicLink } from '@/utils/get-dynamic-link';
 import {
-  getWalletRatings,
-  WalletStoreRatings,
-} from '@/utils/get-wallet-ratings';
+  STORE_RATINGS,
+  WALLET_LINK_APPLE,
+  WALLET_LINK_GOOGLE,
+} from '@/constants';
+import { getDynamicLink } from '@/utils/get-dynamic-link';
 
 export function WalletBlock() {
   const t = useTranslations('index-page');
   const posthog = usePostHog();
-  const [storeRatings, setStoreRatings] = useState<WalletStoreRatings | null>(
-    null,
-  );
 
   const { appStoreLink, playMarketLink } = useMemo(() => {
     const distinctId = posthog.get_distinct_id();
@@ -51,12 +48,6 @@ export function WalletBlock() {
       ),
     };
   }, [posthog]);
-
-  useEffect(() => {
-    getWalletRatings().then((ratings) => {
-      setStoreRatings(ratings);
-    });
-  }, []);
 
   return (
     <section>
@@ -96,22 +87,22 @@ export function WalletBlock() {
                 >
                   {t('portfolio-block.text')}
                 </Text>
-                {storeRatings && (
-                  <div className="mt-[24px] flex gap-x-[24px] gap-y-[20px] min-[375px]:gap-x-[32px] md:mt-[36px]">
-                    <div className="flex flex-col gap-y-[6px]">
-                      <span className="font-vcr text-[10px] uppercase leading-[16px] text-white/50 rtl:font-handjet">
-                        {t('portfolio-block.stores.app-store')}
-                      </span>
-                      <RatingBadge rating={storeRatings.appStore} />
-                    </div>
-                    <div className="flex flex-col gap-y-[6px]">
-                      <span className="font-vcr text-[10px] uppercase leading-[16px] text-white/50 rtl:font-handjet">
-                        {t('portfolio-block.stores.google-play')}
-                      </span>
-                      <RatingBadge rating={storeRatings.googlePlay} />
-                    </div>
+
+                <div className="mt-[24px] flex gap-x-[24px] gap-y-[20px] min-[375px]:gap-x-[32px] md:mt-[36px]">
+                  <div className="flex flex-col gap-y-[6px]">
+                    <span className="font-vcr text-[10px] uppercase leading-[16px] text-white/50 rtl:font-handjet">
+                      {t('portfolio-block.stores.app-store')}
+                    </span>
+                    <RatingBadge rating={STORE_RATINGS.appStore} />
                   </div>
-                )}
+                  <div className="flex flex-col gap-y-[6px]">
+                    <span className="font-vcr text-[10px] uppercase leading-[16px] text-white/50 rtl:font-handjet">
+                      {t('portfolio-block.stores.google-play')}
+                    </span>
+                    <RatingBadge rating={STORE_RATINGS.googlePlay} />
+                  </div>
+                </div>
+
                 <div className="hidden lg:mt-[24px] lg:flex lg:flex-row lg:gap-x-[16px]">
                   <div className="w-fit">
                     <Link
