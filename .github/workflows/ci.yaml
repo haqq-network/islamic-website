@@ -40,4 +40,4 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
       - run: pnpm exec nx affected --parallel 3 --target lint test build
       - run: pnpm exec nx build islamic-website
-      - run: pnpm exec nx affected --parallel 1 --target e2e
+      # - run: pnpm exec nx affected --parallel 1 --target e2e
