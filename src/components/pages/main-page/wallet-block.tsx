@@ -33,14 +33,13 @@ export function WalletBlock() {
   const appStoreLink = getDynamicLink(
     'https://haqq.network/wallet',
     distinctId,
-    'https://apps.apple.com/app/haqq-wallet-by-bored-gen/id6443843352',
+    WALLET_LINK_APPLE,
   );
   const playMarketLink = getDynamicLink(
     'https://haqq.network/wallet',
     distinctId,
-    'https://play.google.com/store/apps/details?id=com.haqq.wallet',
+    WALLET_LINK_GOOGLE,
   );
-
 
   return (
     <section>
