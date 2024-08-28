@@ -21,10 +21,11 @@ export const metadata: Metadata = {
   },
 };
 export default async function Page({
-  params: { locale },
+  params,
 }: {
   params: { locale: SupportedLocales };
 }) {
+  const { locale } = params;
   const [fatwa, members] = await Promise.all([
     await getFatwaContentFromFalconer(locale),
     await getMembersContentFromFalconer(locale),

@@ -6,7 +6,6 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { Transition } from '@headlessui/react';
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 import { LocaleLink } from '@/navigation';
@@ -93,22 +92,13 @@ function HeaderDropdown({
         </svg>
       </div>
 
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-        show={isDropdownOpen}
-      >
+      {isDropdownOpen && (
         <div className="absolute left-1/2 top-full min-w-max origin-center translate-x-[-50%]">
           <div className="w-fit rounded-xl bg-[#15191ef2] p-[8px] backdrop-blur">
             {children}
           </div>
         </div>
-      </Transition>
+      )}
     </div>
   );
 }

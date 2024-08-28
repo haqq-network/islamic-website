@@ -1,6 +1,6 @@
 'use client';
-import { Fragment, useMemo } from 'react';
-import { Menu, Transition } from '@headlessui/react';
+import { useMemo } from 'react';
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import clsx from 'clsx';
 
 export function Select({
@@ -25,7 +25,7 @@ export function Select({
   const optionsToRender = useMemo(() => {
     return variants.map(({ id, title }) => {
       return (
-        <Menu.Item
+        <MenuItem
           as="div"
           className={clsx(
             'block w-full min-w-fit whitespace-nowrap px-[16px] py-[8px] font-vcr text-base uppercase hover:bg-[#ffffff14] rtl:font-handjet',
@@ -59,75 +59,60 @@ export function Select({
               />
             </svg>
           )}
-        </Menu.Item>
+        </MenuItem>
       );
     });
   }, [current, onChange, variants]);
 
   return (
     <Menu as="div" className={clsx('relative inline-block w-full', className)}>
-      <Menu.Button as={Fragment}>
-        {({ open }) => {
-          return (
-            <button
-              className={clsx(
-                'flex h-[48px] flex-row items-center justify-between gap-[6px] rounded-[8px] px-[16px] py-[12px]',
-                'font-vcr text-base rtl:font-handjet',
-                'transition-colors duration-300 ease-out',
-                'box-border appearance-none outline-none',
-                'hover:text-haqq-black w-full uppercase text-white',
-                open ? 'bg-[#585858]' : 'bg-[#2F2F2F]',
-              )}
-            >
-              <div>
-                {currentValue ? (
-                  <span>{currentValue.title}</span>
-                ) : (
-                  <span className="text-white/50">{placeholder}</span>
-                )}
-              </div>
-
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 22 22"
-                fill="none"
-                className={clsx(
-                  'mb-[-2px] mr-[-6px]',
-                  'transition-transform duration-150 ease-in',
-                  open && 'scale-y-[-1]',
-                )}
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M4.85156 8.89817L6.14793 7.60181L10.9997 12.4536L15.8516 7.60181L17.1479 8.89817L10.9997 15.0464L4.85156 8.89817Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </button>
-          );
-        }}
-      </Menu.Button>
-
-      <Transition
-        as={Fragment}
-        enter="ease-out duration-100"
-        enterFrom="opacity-0 scale-95"
-        enterTo="opacity-100 scale-100"
-        leave="ease-in duration-75"
-        leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-95"
+      <MenuButton
+        as="button"
+        className={clsx(
+          'flex h-[48px] flex-row items-center justify-between gap-[6px] rounded-[8px] px-[16px] py-[12px]',
+          'font-vcr text-base rtl:font-handjet',
+          'transition-colors duration-300 ease-out',
+          'box-border appearance-none outline-none',
+          'hover:text-haqq-black w-full uppercase text-white',
+          'data-[open]:bg-[#585858] [&:not([data-open])]:bg-[#2F2F2F]',
+        )}
       >
-        <Menu.Items
+        <div>
+          {currentValue ? (
+            <span>{currentValue.title}</span>
+          ) : (
+            <span className="text-white/50">{placeholder}</span>
+          )}
+        </div>
+
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
           className={clsx(
-            'absolute left-[0px] z-10 mt-[4px] w-fit min-w-full origin-top rounded-[8px] bg-[#2f2f2f] py-[8px] shadow-lg focus:outline-none',
-            'max-h-[256px] overflow-y-scroll',
+            'mb-[-2px] mr-[-6px]',
+            'transition-transform duration-150 ease-in',
+            'group-data-[open]:scale-y-[-1]',
           )}
         >
-          {optionsToRender}
-        </Menu.Items>
-      </Transition>
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M4.85156 8.89817L6.14793 7.60181L10.9997 12.4536L15.8516 7.60181L17.1479 8.89817L10.9997 15.0464L4.85156 8.89817Z"
+            fill="currentColor"
+          />
+        </svg>
+      </MenuButton>
+
+      <MenuItems
+        className={clsx(
+          'absolute left-[0px] z-10 mt-[4px] w-fit min-w-full origin-top rounded-[8px] bg-[#2f2f2f] py-[8px] shadow-lg focus:outline-none',
+          'max-h-[256px] overflow-y-scroll',
+        )}
+      >
+        {optionsToRender}
+      </MenuItems>
     </Menu>
   );
 }
