@@ -36,10 +36,15 @@ const config = {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
         },
+        reveal: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
       },
       animation: {
         'scroll-left': 'scroll-left 60s linear infinite',
         'scroll-right': 'scroll-right 60s linear infinite',
+        reveal: 'reveal 0.15s',
       },
       screens: {},
     },

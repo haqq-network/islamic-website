@@ -178,7 +178,6 @@ export function ShariahPage({
                   onSectionInView={handleSectionInView}
                   initialInView
                 >
-                  {/* <div className="border-b-[1px] border-[#2F2F2F] pb-[32px] pt-[32px] md:pb-[60px] lg:pb-[80px]"> */}
                   <div className="pb-[32px] pt-[32px] md:pb-[60px] lg:pb-[80px]">
                     <FatwaBlock locale={locale} fatwa={fatwa} />
                   </div>
@@ -186,14 +185,12 @@ export function ShariahPage({
                 <ScrollSpySection
                   id="foundations"
                   onSectionInView={handleSectionInView}
-                  // threshold={[0.2, 0.5]}
                 >
                   <div className="py-[32px] md:py-[60px] lg:py-[80px]">
                     <FoundationsBlock />
                   </div>
                 </ScrollSpySection>
                 <ScrollSpySection
-                  // threshold={[0.2, 0.5]}
                   id="shariah-oracle"
                   onSectionInView={handleSectionInView}
                 >
@@ -202,7 +199,6 @@ export function ShariahPage({
                   </div>
                 </ScrollSpySection>
                 <ScrollSpySection
-                  // threshold={[0.2, 0.5]}
                   id="shariah-board"
                   onSectionInView={handleSectionInView}
                 >
@@ -226,7 +222,6 @@ export function ShariahPage({
                   </div>
                 </ScrollSpySection>
                 <ScrollSpySection
-                  // threshold={[0.2, 0.5]}
                   id="advisory-board"
                   onSectionInView={handleSectionInView}
                 >
@@ -245,7 +240,6 @@ export function ShariahPage({
                   </div>
                 </ScrollSpySection>
                 <ScrollSpySection
-                  // threshold={[0.2, 0.5]}
                   id="executive-board"
                   onSectionInView={handleSectionInView}
                 >

@@ -1,11 +1,6 @@
 'use client';
-import {
-  Fragment,
-  PropsWithChildren,
-  SyntheticEvent,
-  useCallback,
-} from 'react';
-import { Dialog, Transition } from '@headlessui/react';
+import { PropsWithChildren, SyntheticEvent, useCallback } from 'react';
+import { Dialog } from '@headlessui/react';
 import clsx from 'clsx';
 
 function ModalOverlay({ onClose }: { onClose: () => void }) {
@@ -22,22 +17,12 @@ function ModalOverlay({ onClose }: { onClose: () => void }) {
   );
 
   return (
-    <Transition.Child
-      as={Fragment}
-      enter="ease-out duration-300"
-      enterFrom="opacity-0"
-      enterTo="opacity-100"
-      leave="ease-in duration-200"
-      leaveFrom="opacity-100"
-      leaveTo="opacity-0"
-    >
-      <div
-        role="none"
-        className="bg-islamic-modal-overlay fixed inset-0 transform-gpu backdrop-blur"
-        onClick={onClose}
-        onKeyDown={handleKeydown}
-      />
-    </Transition.Child>
+    <div
+      role="none"
+      className="bg-islamic-modal-overlay animate-reveal fixed inset-0 transform-gpu backdrop-blur"
+      onClick={onClose}
+      onKeyDown={handleKeydown}
+    />
   );
 }
 
@@ -90,28 +75,21 @@ export function Modal({
   onClose: () => void;
 }>) {
   return (
-    <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-[9999]" onClose={onClose}>
-        <ModalOverlay onClose={onClose} />
+    <Dialog
+      as="div"
+      className="relative z-[9999]"
+      onClose={onClose}
+      open={isOpen}
+    >
+      <ModalOverlay onClose={onClose} />
 
-        <div className="pointer-events-none fixed inset-0 overflow-y-auto">
-          <div className="pointer-events-none flex min-h-full items-center justify-center p-4">
-            <Transition.Child
-              as={Fragment}
-              enter="ease-out duration-200"
-              enterFrom="opacity-0 scale-95"
-              enterTo="opacity-100 scale-100"
-              leave="ease-in duration-150"
-              leaveFrom="opacity-100 scale-100"
-              leaveTo="opacity-0 scale-95"
-            >
-              <div className="pointer-events-auto transform transition-all">
-                {children}
-              </div>
-            </Transition.Child>
+      <div className="pointer-events-none fixed inset-0 overflow-y-auto">
+        <div className="pointer-events-none flex min-h-full items-center justify-center p-4">
+          <div className="pointer-events-auto transform transition-all">
+            {children}
           </div>
         </div>
-      </Dialog>
-    </Transition>
+      </div>
+    </Dialog>
   );
 }
