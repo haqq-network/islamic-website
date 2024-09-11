@@ -1,11 +1,5 @@
 'use client';
-import {
-  Fragment,
-  PropsWithChildren,
-  useCallback,
-  useEffect,
-  useState,
-} from 'react';
+import { PropsWithChildren, useCallback, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 import { LocaleLink } from '@/navigation';
