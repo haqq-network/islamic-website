@@ -45,8 +45,8 @@ importers:
         specifier: 3.17.6
         version: 3.17.6(next@14.2.6(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(react@18.3.1)
       posthog-js:
-        specifier: 1.157.2
-        version: 1.157.2
+        specifier: 1.161.5
+        version: 1.161.5
       qrcode.react:
         specifier: 3.1.0
         version: 3.1.0(react@18.3.1)
@@ -7615,8 +7615,8 @@ packages:
     resolution: {integrity: sha512-9ZhXKM/rw350N1ovuWHbGxnGh/SNJ4cnxHiM0rxE4VN41wsg8P8zWn9hv/buK00RP4WvlOyr/RBDiptyxVbkZQ==}
     engines: {node: '>=0.10.0'}
 
-  posthog-js@1.157.2:
-    resolution: {integrity: sha512-ATYKGs+Q51u26nHHhrhWNh1whqFm7j/rwQQYw+y6/YzNmRlo+YsqrGZji9nqXb9/4fo0ModDr+ZmuOI3hKkUXA==}
+  posthog-js@1.161.5:
+    resolution: {integrity: sha512-KGkb12grSQvGRauH6z+AUB83c4dgWqzmJFDjyMXarWRafaLN80HzjN1jk806x27HvdDXi21jtwiXekioWzEQ9g==}
 
   preact@10.23.2:
     resolution: {integrity: sha512-kKYfePf9rzKnxOAKDpsWhg/ysrHPqT+yQ7UW4JjdnqjFIeNUnNcEJvhuA8fDenxAGWzUqtd51DfVg7xp/8T9NA==}
@@ -9411,7 +9411,7 @@ snapshots:
       '@babel/helper-function-name': 7.24.7
       '@babel/helper-member-expression-to-functions': 7.24.7
       '@babel/helper-optimise-call-expression': 7.24.7
-      '@babel/helper-replace-supers': 7.24.7(@babel/core@7.25.2)
+      '@babel/helper-replace-supers': 7.24.7(@babel/core@7.24.7)
       '@babel/helper-skip-transparent-expression-wrappers': 7.24.7
       '@babel/helper-split-export-declaration': 7.24.7
       semver: 6.3.1
@@ -9522,6 +9522,15 @@ snapshots:
       '@babel/helper-annotate-as-pure': 7.24.7
       '@babel/helper-environment-visitor': 7.24.7
       '@babel/helper-wrap-function': 7.24.7
+    transitivePeerDependencies:
+      - supports-color
+
+  '@babel/helper-replace-supers@7.24.7(@babel/core@7.24.7)':
+    dependencies:
+      '@babel/core': 7.24.7
+      '@babel/helper-environment-visitor': 7.24.7
+      '@babel/helper-member-expression-to-functions': 7.24.7
+      '@babel/helper-optimise-call-expression': 7.24.7
     transitivePeerDependencies:
       - supports-color
 
@@ -9873,7 +9882,7 @@ snapshots:
   '@babel/plugin-transform-class-properties@7.24.7(@babel/core@7.24.7)':
     dependencies:
       '@babel/core': 7.24.7
-      '@babel/helper-create-class-features-plugin': 7.24.7(@babel/core@7.25.2)
+      '@babel/helper-create-class-features-plugin': 7.24.7(@babel/core@7.24.7)
       '@babel/helper-plugin-utils': 7.24.7
     transitivePeerDependencies:
       - supports-color
@@ -10011,7 +10020,7 @@ snapshots:
   '@babel/plugin-transform-modules-commonjs@7.24.7(@babel/core@7.24.7)':
     dependencies:
       '@babel/core': 7.24.7
-      '@babel/helper-module-transforms': 7.24.7(@babel/core@7.25.2)
+      '@babel/helper-module-transforms': 7.24.7(@babel/core@7.24.7)
       '@babel/helper-plugin-utils': 7.24.7
       '@babel/helper-simple-access': 7.24.7
     transitivePeerDependencies:
@@ -10059,7 +10068,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.24.7
       '@babel/helper-plugin-utils': 7.24.7
-      '@babel/plugin-syntax-nullish-coalescing-operator': 7.8.3(@babel/core@7.25.2)
+      '@babel/plugin-syntax-nullish-coalescing-operator': 7.8.3(@babel/core@7.24.7)
 
   '@babel/plugin-transform-nullish-coalescing-operator@7.24.7(@babel/core@7.25.2)':
     dependencies:
@@ -10114,7 +10123,7 @@ snapshots:
       '@babel/core': 7.24.7
       '@babel/helper-plugin-utils': 7.24.7
       '@babel/helper-skip-transparent-expression-wrappers': 7.24.7
-      '@babel/plugin-syntax-optional-chaining': 7.8.3(@babel/core@7.25.2)
+      '@babel/plugin-syntax-optional-chaining': 7.8.3(@babel/core@7.24.7)
     transitivePeerDependencies:
       - supports-color
 
@@ -10135,7 +10144,7 @@ snapshots:
   '@babel/plugin-transform-private-methods@7.24.7(@babel/core@7.24.7)':
     dependencies:
       '@babel/core': 7.24.7
-      '@babel/helper-create-class-features-plugin': 7.24.7(@babel/core@7.25.2)
+      '@babel/helper-create-class-features-plugin': 7.24.7(@babel/core@7.24.7)
       '@babel/helper-plugin-utils': 7.24.7
     transitivePeerDependencies:
       - supports-color
@@ -19255,7 +19264,7 @@ snapshots:
     dependencies:
       xtend: 4.0.2
 
-  posthog-js@1.157.2:
+  posthog-js@1.161.5:
     dependencies:
       fflate: 0.4.8
       preact: 10.23.2
