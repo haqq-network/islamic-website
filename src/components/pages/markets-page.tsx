@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 // import bitgetLogoImageData from '@/assets/images/bitget.svg';
+import gateLogoImageData from '@/assets/images/exchanges/gate.svg';
+import indodaxLogoImageData from '@/assets/images/exchanges/indodax.svg';
 import kucoinLogoImageData from '@/assets/images/exchanges/kucoin.svg';
 import lbankLogoImageData from '@/assets/images/exchanges/lbank.png';
 import mexcLogoImageData from '@/assets/images/exchanges/mexc.svg';
@@ -195,6 +197,24 @@ export function MarketsPage({ price }: { price: string }) {
                   data-attr="cex-mexc"
                 >
                   <CEXCard name="MEXC" logo={mexcLogoImageData} />
+                </Link>
+
+                <Link
+                  href="https://www.gate.io/trade/ISLM_USDT"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-attr="cex-gate"
+                >
+                  <CEXCard name="Gate.io" logo={gateLogoImageData} />
+                </Link>
+
+                <Link
+                  href="https://indodax.com/market/ISLMIDR"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-attr="cex-indodax"
+                >
+                  <CEXCard name="Indodax" logo={indodaxLogoImageData} />
                 </Link>
               </div>
             </div>
