@@ -196,7 +196,7 @@ function AnalyticsAndScripts() {
       />
       <Script
         async={true}
-        src="https://www.googletagmanager.com/gtag/js?id=G-5FLBNV5M30"
+        src="https://www.googletagmanager.com/gtag/js?id=G-6TX91W31RE"
         id="gtm-haqq"
         data-cookiecategory="analytics"
       />
