@@ -166,55 +166,21 @@ function AnalyticsAndScripts() {
       />
       <Script
         async={true}
-        defer={true}
-        id="gtm"
-        data-cookiecategory="analytics"
-        dangerouslySetInnerHTML={{
-          __html: `
-                    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                    })(window,document,'script','dataLayer','GTM-5H2ZFCN');
-                  `,
-        }}
-      />
-      <Script
-        async={true}
-        defer={true}
-        id="gtm-2"
-        data-cookiecategory="analytics"
-        dangerouslySetInnerHTML={{
-          __html: `
-                    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                    })(window,document,'script','dataLayer','GTM-WMP75MQS');
-                  `,
-        }}
-      />
-      <Script
-        async={true}
         src="https://www.googletagmanager.com/gtag/js?id=G-6TX91W31RE"
-        id="gtm-haqq"
+        id="gtag-script"
         data-cookiecategory="analytics"
       />
       <Script
-        defer={true}
-        id="gtm-haqq-2"
+        id="gtag-config"
         data-cookiecategory="analytics"
         dangerouslySetInnerHTML={{
           __html: `
-            window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-5FLBNV5M30');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6TX91W31RE');
           `,
         }}
-      />
-      <Script
-        async={true}
-        src="https://www.googletagmanager.com/ns.html?id=GTM-WMP75MQS"
-        id="gtm-haqq-3"
-        data-cookiecategory="analytics"
       />
 
       <CookieConsentModal />
