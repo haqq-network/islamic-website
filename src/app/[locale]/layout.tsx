@@ -166,7 +166,7 @@ function AnalyticsAndScripts() {
       />
       <Script
         async={true}
-        src="https://www.googletagmanager.com/gtag/js?id=G-6TX91W31RE"
+        src="https://www.googletagmanager.com/gtag/js?id=G-SLXJ759ZRZ"
         id="gtag-script"
         data-cookiecategory="analytics"
       />
@@ -178,7 +178,7 @@ function AnalyticsAndScripts() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-6TX91W31RE');
+            gtag('config', 'G-SLXJ759ZRZ');
           `,
         }}
       />
