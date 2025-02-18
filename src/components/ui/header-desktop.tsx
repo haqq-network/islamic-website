@@ -242,11 +242,6 @@ export function DesktopHeader({
                 <div className="flex gap-x-[18px]">
                   <div className="flex flex-col">
                     <DropdownLink
-                      title={t('dropdown-links.team.career')}
-                      icon={<CaseIcon />}
-                      href="/career"
-                    />
-                    <DropdownLink
                       title={t('dropdown-links.team.our-values')}
                       icon={<ValuesIcon />}
                       href="/values"
