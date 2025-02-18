@@ -30,14 +30,6 @@ export function CareerPage() {
             </p>
           </div>
 
-          <Link
-            href="https://islamiccoin.bamboohr.com/careers"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-[24px] block w-fit max-w-[233px] md:mt-[44px]"
-          >
-            <Button>{t('button-text')}</Button>
-          </Link>
         </div>
 
         <div

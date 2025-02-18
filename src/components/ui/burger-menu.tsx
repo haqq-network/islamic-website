@@ -173,12 +173,7 @@ export function BurgerMenu({
           />
         </MobileMenuDropdownLink>
         <MobileMenuDropdownLink title={t('dropdown-links.team.team')}>
-          <BurgerMenuDropdownLink
-            title={t('dropdown-links.team.career')}
-            icon={<CaseIcon />}
-            href="/career"
-            onClick={onClick}
-          />
+          
           <BurgerMenuDropdownLink
             title={t('dropdown-links.team.our-values')}
             icon={<ValuesIcon />}
