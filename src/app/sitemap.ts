@@ -12,7 +12,6 @@ const staticRoutes = [
   '/',
   '/academy',
   '/build',
-  // '/career',
   '/community-hub',
   '/contact-us',
   '/dubai-residents-disclaimer',
