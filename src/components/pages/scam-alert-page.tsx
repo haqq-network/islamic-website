@@ -8,7 +8,7 @@ import { MarkdownTextProseWrapper } from '@/components/ui/markdown-text';
 
 const haqqLink = 'https://haqq.network';
 const islamicLink = 'https://islamiccoin.net';
-const islamicInsta = 'https://www.instagram.com/Islamic.Coin/';
+const islamicInsta = 'https://www.instagram.com/haqq_network';
 const islamicTwitter = 'https://twitter.com/islamic_coin';
 const haqqTwitter = 'https://twitter.com/the_haqqnetwork';
 
@@ -67,7 +67,7 @@ export function ScamAlertPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      @Islamic.Coin
+                      @haqq_network
                     </Link>
                   );
                 },
