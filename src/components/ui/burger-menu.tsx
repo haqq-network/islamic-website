@@ -13,7 +13,6 @@ import {
   AlertIcon,
   BlogIcon,
   BuildIcon,
-  CaseIcon,
   CommunityIcon,
   CubeIcon,
   EcosystemIcon,

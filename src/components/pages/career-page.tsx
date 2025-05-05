@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import careerStarsImgData from '@/assets/images/career-stars.jpg';
-import { Button } from '@/components/ui/button';
+// import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { Text } from '@/components/ui/text';
 
@@ -29,7 +29,6 @@ export function CareerPage() {
               <Text size="small">{t('text.paragraphs.third')}</Text>
             </p>
           </div>
-
         </div>
 
         <div

@@ -12,7 +12,6 @@ import {
   AcademyIcon,
   BlogIcon,
   BuildIcon,
-  CaseIcon,
   CommunityIcon,
   EcosystemIcon,
   MissionIcon,

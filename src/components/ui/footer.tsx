@@ -211,7 +211,7 @@ export function Footer({
                 })}
               </div>
               <div className="mt-[28px] flex items-center gap-x-[12px] md:mt-0 lg:gap-x-[32px]">
-                <LocaleLink
+                {/* <LocaleLink
                   href="https://wggos.org"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -223,7 +223,7 @@ export function Footer({
                     alt=""
                     fill
                   />
-                </LocaleLink>
+                </LocaleLink> */}
                 <LocaleLink
                   href="https://sdgs.un.org/goals"
                   target="_blank"
