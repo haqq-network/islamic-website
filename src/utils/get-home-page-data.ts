@@ -1,23 +1,9 @@
 import { cache } from 'react';
 import { FALCONER_ENDPOINT, REVALIDATE_TIME } from '@/constants';
-import { FalconerNewsPost, NewsPost, NextRequestInit } from '@/types';
+import { NextRequestInit } from '@/types';
 import { FalconerMembers } from './get-members';
 
 export const revalidate = REVALIDATE_TIME;
-
-export function mapFalconerNews(data: FalconerNewsPost[]): NewsPost[] {
-  return data.map((post) => {
-    return {
-      image: post.image,
-      title: post.title,
-      description: post.description,
-      date: new Date(post.date),
-      source: post.source,
-      type: post.content_type,
-      url: post.url,
-    };
-  });
-}
 
 export async function getIslamicHomePageData(
   options: Partial<NextRequestInit>,
@@ -38,11 +24,9 @@ export async function getIslamicHomePageData(
 
   const responseJson: {
     members: FalconerMembers;
-    news: FalconerNewsPost[];
   } = await response.json();
 
   return {
-    news: mapFalconerNews(responseJson.news),
     advisoryMembers: responseJson.members.advisory_members,
     executiveMembers: responseJson.members.executive_members,
     shariahMembers: responseJson.members.shariah_members,
@@ -64,7 +48,6 @@ export const getHomePageDataFromFalconer = cache(async (locale: string) => {
       advisoryMembers: data.advisoryMembers,
       executiveMembers: data.executiveMembers,
       shariahMembers: data.shariahMembers,
-      news: data.news,
     };
   } catch (error) {
     console.error(error);
@@ -74,6 +57,5 @@ export const getHomePageDataFromFalconer = cache(async (locale: string) => {
     advisoryMembers: [],
     executiveMembers: [],
     shariahMembers: [],
-    news: [],
   };
 });

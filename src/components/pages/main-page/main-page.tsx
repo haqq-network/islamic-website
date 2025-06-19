@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { Marquee } from '@/components/ui/marquee';
 import { MoonAnimatedBg } from '@/components/ui/moon-animated-background';
-import { Member, NewsPost } from '@/types';
+import { Member } from '@/types';
 import { ChainStats } from '@/utils/get-chain-stats-data';
 import { BoardMembersBlock } from './board-members-block';
 import { FinanceBlock } from './finance-block';
@@ -13,7 +13,6 @@ import { FundsBlock } from './funds-block';
 import { HeroBlock } from './hero-block';
 import { JoinCommunityBlock } from './join-community-block';
 import { LearnAndGrowBlock } from './learn-and-grow-block';
-import { NewsBlock } from './news-block';
 import { WhyBlock } from './why-block';
 
 const WalletBlock = dynamic(
@@ -25,13 +24,11 @@ const WalletBlock = dynamic(
 );
 
 export function MainPage({
-  news,
   advisoryMembers,
   shariahMembers,
   executiveMembers,
   stats,
 }: {
-  news?: NewsPost[];
   advisoryMembers: Member[];
   shariahMembers: Member[];
   executiveMembers: Member[];
@@ -42,7 +39,6 @@ export function MainPage({
       <Hero stats={stats} />
       <FundsBlock />
       <FinanceBlock />
-      <NewsBlock news={news} />
       <BoardMembersBlock
         executiveMembers={executiveMembers}
         shariahMembers={shariahMembers}

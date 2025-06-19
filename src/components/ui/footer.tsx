@@ -90,10 +90,6 @@ const footerNavLinks: FooterNavLinks = [
   ],
   [
     {
-      url: '/news',
-      title: 'islm-in-media',
-    },
-    {
       url: '/community-hub',
       title: 'community-hub',
     },

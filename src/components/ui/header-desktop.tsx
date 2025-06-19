@@ -10,12 +10,10 @@ import { DropdownLink } from './dropdown-link';
 import { IslamicHeaderLogo } from '../icons';
 import {
   AcademyIcon,
-  BlogIcon,
   BuildIcon,
   CommunityIcon,
   EcosystemIcon,
   MissionIcon,
-  NewsIcon,
   RoadmapIcon,
   ValuesIcon,
   HalfMoonAndStarIcon,
@@ -185,11 +183,6 @@ export function DesktopHeader({
                   </div>
                   <div className="flex flex-col">
                     <DropdownLink
-                      title={t('dropdown-links.about.news')}
-                      icon={<NewsIcon />}
-                      href="/news"
-                    />
-                    <DropdownLink
                       title={t('dropdown-links.about.build-on-haqq')}
                       icon={<BuildIcon />}
                       href="/build"
@@ -218,11 +211,6 @@ export function DesktopHeader({
                     title={t('dropdown-links.learn.privacy-policy')}
                     icon={<QuestionMarkIcon />}
                     href="/privacy-policy"
-                  />
-                  <DropdownLink
-                    title={t('dropdown-links.learn.blog')}
-                    icon={<BlogIcon />}
-                    href="/blog"
                   />
                   <DropdownLink
                     title={t('dropdown-links.learn.fraud-alert')}

@@ -29,13 +29,12 @@ export default async function Page({
   params: { locale: SupportedLocales };
 }) {
   const stats = await getChainStatsFromFalconer();
-  const { news, advisoryMembers, executiveMembers, shariahMembers } =
+  const { advisoryMembers, executiveMembers, shariahMembers } =
     await getHomePageDataFromFalconer(locale);
 
   return (
     <MainPage
       stats={stats}
-      news={news}
       advisoryMembers={advisoryMembers}
       executiveMembers={executiveMembers}
       shariahMembers={shariahMembers}

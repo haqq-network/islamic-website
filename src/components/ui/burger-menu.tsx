@@ -11,14 +11,12 @@ import { LocaleLink } from '@/navigation';
 import {
   AcademyIcon,
   AlertIcon,
-  BlogIcon,
   BuildIcon,
   CommunityIcon,
   CubeIcon,
   EcosystemIcon,
   HalfMoonAndStarIcon,
   MissionIcon,
-  NewsIcon,
   QuestionMarkIcon,
   RoadmapIcon,
   StarIcon,
@@ -106,12 +104,6 @@ export function BurgerMenu({
               onClick={onClick}
             />
             <BurgerMenuDropdownLink
-              title={t('dropdown-links.about.news')}
-              icon={<NewsIcon />}
-              href="/news"
-              onClick={onClick}
-            />
-            <BurgerMenuDropdownLink
               title={t('dropdown-links.about.ecosystem')}
               icon={<EcosystemIcon />}
               href="https://haqq.network/ecosystem"
@@ -151,12 +143,6 @@ export function BurgerMenu({
             title="Privacy Policy"
             icon={<QuestionMarkIcon />}
             href="/privacy-policy"
-          />
-          <BurgerMenuDropdownLink
-            title={t('dropdown-links.learn.blog')}
-            icon={<BlogIcon />}
-            href="/blog"
-            onClick={onClick}
           />
           <BurgerMenuDropdownLink
             title={t('dropdown-links.learn.fraud-alert')}
